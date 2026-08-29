@@ -1,0 +1,21 @@
+{
+  "$schema": "../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "vendor-game-short-purpose",
+  "name": "Human-readable patch name",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.vendor.game",
+    "bundleVersions": ["1.0"],
+    "executableSha256": ["0000000000000000000000000000000000000000000000000000000000000000"],
+    "allowLegacyWeakMatch": false
+  },
+  "actions": {
+    "presentation": {
+      "presentFlipX": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "formatVersion": 1,
+  "generated": false,
+  "patches": [
+    {
+      "id": "inotia1-present-flip",
+      "path": "catalog/com.com2us.feanor2/inotia1-present-flip.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    }
+  ]
+}

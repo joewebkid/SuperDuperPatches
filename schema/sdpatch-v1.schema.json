@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:superduper:sdpatch:schema:v1",
+  "title": "Super Duper patch manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["formatVersion", "id", "name", "kind", "status", "defaultEnabled", "target", "actions"],
+  "properties": {
+    "$schema": { "type": "string" },
+    "formatVersion": { "const": 1 },
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]*$",
+      "maxLength": 96
+    },
+    "name": { "type": "string", "minLength": 1, "maxLength": 128 },
+    "kind": {
+      "enum": ["compatibility", "presentation-layout", "input", "resource-mod", "binary"]
+    },
+    "status": { "enum": ["experimental", "verified", "deprecated"] },
+    "defaultEnabled": {
+      "type": "boolean",
+      "description": "Policy used only when the per-game profile selects Automatic."
+    },
+    "priority": { "type": "integer", "minimum": 0, "maximum": 1000, "default": 100 },
+    "target": { "$ref": "#/$defs/target" },
+    "actions": { "$ref": "#/$defs/actions" }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bundleId"],
+      "properties": {
+        "bundleId": { "type": "string", "minLength": 1 },
+        "bundleVersions": {
+          "type": "array",
+          "items": { "type": "string", "minLength": 1 },
+          "uniqueItems": true,
+          "default": []
+        },
+        "executableSha256": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/sha256" },
+          "uniqueItems": true,
+          "default": []
+        },
+        "allowLegacyWeakMatch": {
+          "type": "boolean",
+          "default": false,
+          "description": "Reserved for built-in migrations. Community submissions must not enable it."
+        }
+      },
+      "anyOf": [
+        {
+          "required": ["bundleVersions", "executableSha256"],
+          "properties": {
+            "bundleVersions": { "minItems": 1 },
+            "executableSha256": { "minItems": 1 }
+          }
+        },
+        { "required": ["allowLegacyWeakMatch"], "properties": { "allowLegacyWeakMatch": { "const": true } } }
+      ]
+    },
+    "actions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["presentation"],
+      "properties": {
+        "presentation": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "presentFlipX": { "type": "boolean" }
+          }
+        }
+      }
+    }
+  }
+}

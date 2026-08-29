@@ -1,0 +1,64 @@
+name: Community patch to draft PR
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  create-draft-pr:
+    if: contains(github.event.issue.body, '<!-- sdpatch-json:start -->')
+    runs-on: ubuntu-latest
+    concurrency: community-patch-${{ github.event.issue.number }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Materialize the submitted manifest
+        id: patch
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: python scripts/issue_to_patch.py
+      - name: Validate schema and catalog
+        run: |
+          pip install check-jsonschema==0.31.3
+          find catalog -name '*.sdpatch.json' -print0 | xargs -0 check-jsonschema --schemafile schema/sdpatch-v1.schema.json
+          python scripts/validate_catalog.py
+      - name: Commit the isolated catalog change
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PATCH_ID: ${{ steps.patch.outputs.patch_id }}
+          PATCH_PATH: ${{ steps.patch.outputs.relative_path }}
+        run: |
+          branch="community/issue-${ISSUE_NUMBER}-${PATCH_ID}"
+          git config user.name "super-duper-patch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add -- "$PATCH_PATH" index.json
+          git commit -m "patch: add ${PATCH_ID}"
+          git push origin "$branch"
+          echo "BRANCH=$branch" >> "$GITHUB_ENV"
+      - name: Open draft pull request
+        id: pull-request
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PATCH_ID: ${{ steps.patch.outputs.patch_id }}
+        run: |
+          pr_url=$(gh pr create --draft --base main --head "$BRANCH" \
+            --title "patch: ${PATCH_ID}" \
+            --body "Community patch generated from #${ISSUE_NUMBER}. Closes #${ISSUE_NUMBER}.\n\nThe manifest passed schema and semantic validation. A maintainer must still review evidence and promote it explicitly.")
+          echo "pr_url=$pr_url" >> "$GITHUB_OUTPUT"
+      - name: Link the draft PR from the submission
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          PR_URL: ${{ steps.pull-request.outputs.pr_url }}
+        run: gh issue comment "$ISSUE_NUMBER" --body "Validated and opened draft PR: $PR_URL"

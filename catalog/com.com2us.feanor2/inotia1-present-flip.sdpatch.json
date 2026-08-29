@@ -1,0 +1,21 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "inotia1-present-flip",
+  "name": "Inotia 1 presentation orientation",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.com2us.feanor2",
+    "bundleVersions": [],
+    "executableSha256": [],
+    "allowLegacyWeakMatch": true
+  },
+  "actions": {
+    "presentation": {
+      "presentFlipX": true
+    }
+  }
+}
