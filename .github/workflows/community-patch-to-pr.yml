@@ -61,4 +61,5 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           PR_URL: ${{ steps.pull-request.outputs.pr_url }}
-        run: gh issue comment "$ISSUE_NUMBER" --body "Validated and opened draft PR: $PR_URL"
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body "Validated and opened draft PR: $PR_URL"
