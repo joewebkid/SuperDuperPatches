@@ -64,11 +64,13 @@ draft-PR path is documented in
 
 ## Submission from the Android app
 
-The app generates an exact-revision manifest and opens a pre-filled GitHub
-submission. After the user confirms it, the `Community patch to draft PR`
-workflow treats the issue body strictly as data, validates it, adds only the
-manifest plus `index.json`, and opens a draft pull request. No GitHub token or
-repository write credential is embedded in the APK.
+The app generates an exact-revision manifest and sends it to the public patch
+gateway. The gateway validates and rate-limits it, then opens a labelled issue
+with a server-side credential limited to issue creation. The
+`Community patch to draft PR` workflow treats the issue body strictly as data,
+validates it again, adds only the manifest plus `index.json`, and opens a draft
+pull request. No GitHub token or repository write credential is embedded in
+the APK.
 
 Community manifests always start as `experimental` and disabled by default.
 The generated PR still requires evidence and maintainer review before merge.

@@ -8,16 +8,20 @@
 3. Choose **Propose a community patch** in the game profile.
 4. The app builds an `sdpatch` manifest targeted to the imported IPA's exact
    bundle ID, version, and executable SHA-256.
-5. Android opens a pre-filled GitHub issue. The user reviews the manifest,
-   adds reproducible evidence, signs in to GitHub, and submits it.
-6. GitHub Actions parses the marked JSON block as untrusted data, validates
+5. Android sends the proposal to the public submission gateway. No GitHub
+   account or repository credential is required in the app.
+6. The gateway validates and rate-limits the request, then creates a labelled
+   GitHub issue using its server-side, narrowly scoped credential.
+7. GitHub Actions parses the marked JSON block as untrusted data, validates
    the schema and semantic rules, commits only the manifest plus `index.json`,
    and opens a draft pull request.
-7. Maintainers review the evidence, test rollback and isolation, and either
+8. Maintainers review the evidence, test rollback and isolation, and either
    request changes or merge the patch.
 
-Creating the issue is the explicit authorization boundary. The APK contains
-no repository token and cannot silently publish on a user's behalf.
+Pressing **Submit patch** is the explicit authorization boundary. The APK
+contains no repository token; GitHub credentials remain encrypted on the
+gateway host. If the gateway is unavailable, the app can still open the old
+manual GitHub form as an explicit fallback.
 
 ## What is supported in v1
 
@@ -44,4 +48,3 @@ build. Remote signed catalog updates are a separate future feature.
 - A patch never mutates the original IPA.
 - Each launch resolves patch state from a clean base profile.
 - User issue text is never executed as shell code.
-

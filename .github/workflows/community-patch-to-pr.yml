@@ -11,7 +11,9 @@ permissions:
 
 jobs:
   create-draft-pr:
-    if: contains(github.event.issue.body, '<!-- sdpatch-json:start -->')
+    if: >-
+      contains(github.event.issue.labels.*.name, 'gateway-submission') &&
+      contains(github.event.issue.body, '<!-- sdpatch-json:start -->')
     runs-on: ubuntu-latest
     concurrency: community-patch-${{ github.event.issue.number }}
     steps:
