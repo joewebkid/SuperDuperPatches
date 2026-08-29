@@ -8,6 +8,13 @@
       "kind": "compatibility",
       "status": "experimental",
       "defaultEnabled": true
+    },
+    {
+      "id": "workflow-selftest-20260829-2",
+      "path": "catalog/org.superduper.workflowtest/workflow-selftest-20260829-2.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": false
     }
   ]
 }

@@ -1,0 +1,24 @@
+{
+  "formatVersion": 1,
+  "id": "workflow-selftest-20260829-2",
+  "name": "Workflow self-test 2",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "org.superduper.workflowtest",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    ],
+    "allowLegacyWeakMatch": false
+  },
+  "actions": {
+    "presentation": {
+      "presentFlipX": false
+    }
+  }
+}
