@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-ea-nfshp-ipad-inc-37523440",
+  "name": "Геймпад · курсор, нажатие и drag — Hot Pursuit",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.nfshp.ipad.inc",
+    "bundleVersions": [
+      "1.3.48"
+    ],
+    "executableSha256": [
+      "37523440b6401d7119706b723bc9d6cfc9743a1b7770059abcb351c8b2e3a629"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-turner-amateursurgeon-3486de6e",
+  "name": "Геймпад · курсор, нажатие и drag — A.Surgeon",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.turner.AmateurSurgeon",
+    "bundleVersions": [
+      "1.1.9"
+    ],
+    "executableSha256": [
+      "3486de6e3dbb2738b0f2a1417974d5f7c2ea059865c427af5f8e003b3541ac0d"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

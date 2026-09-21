@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-dungeonhunteripad-592c4e82",
+  "name": "Геймпад · курсор, нажатие и drag — Dungeon",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.DungeonHunterIPad",
+    "bundleVersions": [
+      "1.0.3"
+    ],
+    "executableSha256": [
+      "592c4e82a21a5348a39626fb393b457406508472ddfc858ca3c3e7c4b507ca34"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

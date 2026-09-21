@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-sigma-team-alienshootermobile-120d4fea",
+  "name": "Геймпад · курсор, нажатие и drag — AlienShooter",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.sigma-team.alienshootermobile",
+    "bundleVersions": [
+      "2015"
+    ],
+    "executableSha256": [
+      "120d4fea2f1d1c18b19bd6db1859c6d77a55f813ad5257563beb0a310df2c101"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

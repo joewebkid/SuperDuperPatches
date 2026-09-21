@@ -25,12 +25,22 @@ manual GitHub form as an explicit fallback.
 
 ## What is supported in v1
 
-The first Android editor intentionally exposes only the typed
-`presentation.presentFlipX` action. It proves the complete contribution path
-without accepting scripts, native code, network requests, or arbitrary file
-writes. Widescreen, gamepad/touch layouts, engine compatibility switches, and
-resource overlays require separately versioned schema actions with their own
-validation and conflict rules.
+The Android editor can propose the common `sdpatch` v1 actions from
+the current profile: typed presentation/EAGL/GLES compatibility switches,
+`presentation.outputFit`, or an input layout. Input manifests can provide exact-revision button-to-touch,
+D-pad/stick zones, tilt and virtual-cursor stabilization. They use virtual
+iPhone/iPad coordinates and are independently selectable in the same profile
+UI. The JSON starting point for maintainers is
+`templates/input.sdpatch.json`.
+
+Maintainer JSON submissions also accept the audited layout policy
+`presentation.virtualScreen: "host-aspect"`. It is not exposed as a generic
+Android editor switch: each game needs camera/culling/HUD/input verification.
+
+A visual mapper, multi-step swipe/pinch macros and safe hiding of a game's own
+touch controls are later input-format revisions. Resource payloads use the
+separate `.sdmod` installer and are never uploaded through the small-manifest
+gateway.
 
 ## Local drafts and published patches
 

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-tapulous-taptaptour-d22d6a7f",
+  "name": "Геймпад · курсор, нажатие и drag — Tap Tap",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.tapulous.taptaptour",
+    "bundleVersions": [
+      "2723"
+    ],
+    "executableSha256": [
+      "d22d6a7f727f8c5f30459f4729e09a3e4987158fc510c1ecde17d24fb9bbde7f"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

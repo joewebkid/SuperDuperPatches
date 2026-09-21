@@ -15,7 +15,7 @@
     },
     "name": { "type": "string", "minLength": 1, "maxLength": 128 },
     "kind": {
-      "enum": ["compatibility", "presentation-layout", "input", "resource-mod", "binary"]
+      "enum": ["compatibility", "presentation-layout", "input", "achievement", "resource-mod", "binary"]
     },
     "status": { "enum": ["experimental", "verified", "deprecated"] },
     "defaultEnabled": {
@@ -23,6 +23,18 @@
       "description": "Policy used only when the per-game profile selects Automatic."
     },
     "priority": { "type": "integer", "minimum": 0, "maximum": 1000, "default": 100 },
+    "dependsOn": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/packageId" },
+      "uniqueItems": true,
+      "default": []
+    },
+    "conflictsWith": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/packageId" },
+      "uniqueItems": true,
+      "default": []
+    },
     "target": { "$ref": "#/$defs/target" },
     "actions": { "$ref": "#/$defs/actions" }
   },
@@ -30,6 +42,11 @@
     "sha256": {
       "type": "string",
       "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "packageId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9.-]*$",
+      "maxLength": 96
     },
     "target": {
       "type": "object",
@@ -69,16 +86,163 @@
     "actions": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["presentation"],
+      "minProperties": 1,
       "properties": {
         "presentation": {
           "type": "object",
           "additionalProperties": false,
           "minProperties": 1,
           "properties": {
-            "presentFlipX": { "type": "boolean" }
+            "presentFlipX": { "type": "boolean" },
+            "presentRotate180": { "type": "boolean" },
+            "correctLandscapeAutorotationLayout": { "type": "boolean" },
+            "disablePresentRotation": { "type": "boolean" },
+            "disableTouchRotation": { "type": "boolean" },
+            "outputFit": { "enum": ["aspect-fit", "stretch"] },
+            "virtualScreen": { "enum": ["host-aspect"] },
+            "forceVirtualScreenViewBounds": { "type": "boolean" },
+            "startupDeviceOrientation": {
+              "enum": ["portrait", "portrait-upside-down", "landscape-left", "landscape-right"]
+            }
+          }
+        },
+        "eagl": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "recoverSharedRenderbufferStorage": { "type": "boolean" },
+            "forceLandscapeRenderbuffer": { "type": "boolean" },
+            "forceDirectPresent": { "type": "boolean" }
+          }
+        },
+        "gles": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "disableInactiveVertexAttributes": { "type": "boolean" },
+            "forceLandscapeViewport": { "type": "boolean" },
+            "trimUnusedSamplerArrays": { "type": "boolean" }
+          }
+        },
+        "input": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "touchRemap": { "type": "boolean" },
+            "buttons": {
+              "type": "array",
+              "items": { "$ref": "#/$defs/buttonTouch" },
+              "uniqueItems": true
+            },
+            "dpadToTouch": { "$ref": "#/$defs/touchArea" },
+            "stickToTouch": {
+              "$ref": "#/$defs/touchArea",
+              "deprecated": true,
+              "description": "Legacy alias for leftStickToTouch. Do not combine both fields."
+            },
+            "leftStickToTouch": { "$ref": "#/$defs/touchArea" },
+            "rightStickToTouch": { "$ref": "#/$defs/touchArea" },
+            "portraitLayout": { "$ref": "#/$defs/orientationInputLayout" },
+            "landscapeLayout": { "$ref": "#/$defs/orientationInputLayout" },
+            "leftDeadzone": { "type": "number", "minimum": 0, "exclusiveMaximum": 1 },
+            "rightDeadzone": { "type": "number", "minimum": 0, "exclusiveMaximum": 1 },
+            "accelerometerMode": { "enum": ["auto", "device", "gamepad", "off"] },
+            "tiltStick": { "enum": ["auto", "none", "left", "right"] },
+            "cursorStick": { "enum": ["auto", "none", "left", "right"] },
+            "cursorMode": { "enum": ["absolute", "relative"] },
+            "cursorClickButton": {
+              "enum": ["A", "B", "X", "Y", "LeftStick", "RightStick", "LeftShoulder", "RightShoulder"]
+            },
+            "xTiltRange": { "type": "number", "minimum": 0, "maximum": 360 },
+            "yTiltRange": { "type": "number", "minimum": 0, "maximum": 360 },
+            "xTiltOffset": { "type": "number", "minimum": -360, "maximum": 360 },
+            "yTiltOffset": { "type": "number", "minimum": -360, "maximum": 360 },
+            "stabilizeVirtualCursor": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["smoothingStrength", "stickyRadius"],
+              "properties": {
+                "smoothingStrength": { "type": "number", "minimum": 0 },
+                "stickyRadius": { "type": "number", "minimum": 0 }
+              }
+            }
+          }
+        },
+        "network": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "description": "Exact-revision offline compatibility only; never grants host network access.",
+          "properties": {
+            "offlineTcpSink": { "type": "boolean" },
+            "offlineUdpSink": { "type": "boolean" }
+          }
+        },
+        "achievements": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["setId", "iconManifest"],
+          "properties": {
+            "setId": { "type": "string", "minLength": 1, "maxLength": 96 },
+            "iconManifest": { "type": "string", "pattern": "^https://" }
           }
         }
+      }
+    },
+    "buttonTouch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["button", "x", "y"],
+      "properties": {
+        "button": {
+          "enum": [
+            "DPadLeft",
+            "DPadUp",
+            "DPadRight",
+            "DPadDown",
+            "Start",
+            "Back",
+            "A",
+            "B",
+            "X",
+            "Y",
+            "LeftStick",
+            "RightStick",
+            "LeftShoulder",
+            "RightShoulder"
+          ]
+        },
+        "x": { "type": "number", "minimum": 0, "maximum": 8192 },
+        "y": { "type": "number", "minimum": 0, "maximum": 8192 }
+      }
+    },
+    "orientationInputLayout": {
+      "type": "object",
+      "additionalProperties": false,
+      "minProperties": 1,
+      "properties": {
+        "buttons": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/buttonTouch" },
+          "uniqueItems": true
+        },
+        "dpadToTouch": { "$ref": "#/$defs/touchArea" },
+        "leftStickToTouch": { "$ref": "#/$defs/touchArea" },
+        "rightStickToTouch": { "$ref": "#/$defs/touchArea" }
+      }
+    },
+    "touchArea": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["x", "y", "width", "height"],
+      "properties": {
+        "x": { "type": "number", "minimum": 0, "maximum": 8192 },
+        "y": { "type": "number", "minimum": 0, "maximum": 8192 },
+        "width": { "type": "number", "exclusiveMinimum": 0, "maximum": 8192 },
+        "height": { "type": "number", "exclusiveMinimum": 0, "maximum": 8192 }
       }
     }
   }

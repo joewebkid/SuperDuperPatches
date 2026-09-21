@@ -1,0 +1,2 @@
+Super Duper ordered overlay source v2
+Resources and binary deltas stay outside the clean IPA.

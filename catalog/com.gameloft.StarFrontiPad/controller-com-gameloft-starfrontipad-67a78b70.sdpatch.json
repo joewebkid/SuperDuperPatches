@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-starfrontipad-67a78b70",
+  "name": "Геймпад · курсор, нажатие и drag — Starfront",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.StarFrontiPad",
+    "bundleVersions": [
+      "1.0.0"
+    ],
+    "executableSha256": [
+      "67a78b70ab85c4ad91a3ab46fc73068b0abe7febb7e8eb268388e2c395e2970a"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

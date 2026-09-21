@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1",
+  "name": "Геймпад · курсор, нажатие и drag — Imps In Tokyo",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "L9978CDJ43.com.wearevigilantes.imps",
+    "bundleVersions": [
+      "1.1.0.4"
+    ],
+    "executableSha256": [
+      "91cf74a10d63326ca58d77573c0a3405e083ff85ea5d969f4b4ab9e2032fa461"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

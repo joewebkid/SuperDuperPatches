@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-www-fishlabs-net-gof2hd-74ece5be",
+  "name": "Геймпад · курсор, нажатие и drag — GOF2 HD",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersions": [
+      "1.1.4"
+    ],
+    "executableSha256": [
+      "74ece5bedf561eed4e71b8d0b875e201c47858a2649a59d65af57390a0554958"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

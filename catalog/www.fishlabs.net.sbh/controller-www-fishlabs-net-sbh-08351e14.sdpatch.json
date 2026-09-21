@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-www-fishlabs-net-sbh-08351e14",
+  "name": "Геймпад · курсор, нажатие и drag — Snowboard",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "www.fishlabs.net.sbh",
+    "bundleVersions": [
+      "1.6"
+    ],
+    "executableSha256": [
+      "08351e14ee38fec9946efc2cd06a4010cce013a6c8cc95e99ca19b8380f7d154"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "gof2-inactive-vertex-attributes",
+  "name": "Galaxy on Fire 2 strict GLES2 vertex state",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersions": ["1.1.10"],
+    "executableSha256": [
+      "03dfc6e7045b640d15aa9c27dc69142df61fd3a3a0806efc48f6c0b14eb20ca6"
+    ]
+  },
+  "actions": {
+    "gles": {
+      "disableInactiveVertexAttributes": true
+    }
+  }
+}

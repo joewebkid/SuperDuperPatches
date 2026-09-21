@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "gof2-gamecenter-achievements",
+  "name": "Galaxy on Fire 2 HD — Game Center achievements and icons",
+  "kind": "achievement",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 120,
+  "target": {
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersions": ["1.1.4"],
+    "executableSha256": [
+      "74ece5bedf561eed4e71b8d0b875e201c47858a2649a59d65af57390a0554958"
+    ]
+  },
+  "actions": {
+    "achievements": {
+      "setId": "gof2-gamekit",
+      "iconManifest": "https://joewebkid.github.io/SuperDuperAchievementIcons/games/www.fishlabs.net.gof2hd/1.1.4/manifest.json"
+    }
+  }
+}

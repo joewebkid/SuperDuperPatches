@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-andreasilliger-tinywings-00e6229a",
+  "name": "Геймпад · курсор, нажатие и drag — Tiny Wings",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.andreasilliger.tinywings",
+    "bundleVersions": [
+      "1.1.0"
+    ],
+    "executableSha256": [
+      "00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-bbd2-f3e5ac00",
+  "name": "Геймпад · курсор, нажатие и drag — BBD2",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.BBD2",
+    "bundleVersions": [
+      "1.0.5"
+    ],
+    "executableSha256": [
+      "f3e5ac001e6be50100cf95c35942a97fc34e5b7936af2b78639e3f58fa268c3b"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

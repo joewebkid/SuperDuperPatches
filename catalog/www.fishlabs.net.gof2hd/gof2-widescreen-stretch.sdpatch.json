@@ -1,0 +1,23 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "gof2-widescreen-stretch",
+  "name": "Galaxy on Fire 2 fullscreen stretch",
+  "kind": "presentation-layout",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "conflictsWith": ["gof2-true-widescreen"],
+  "target": {
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersions": ["1.1.4"],
+    "executableSha256": [
+      "74ece5bedf561eed4e71b8d0b875e201c47858a2649a59d65af57390a0554958"
+    ]
+  },
+  "actions": {
+    "presentation": {
+      "outputFit": "stretch"
+    }
+  }
+}

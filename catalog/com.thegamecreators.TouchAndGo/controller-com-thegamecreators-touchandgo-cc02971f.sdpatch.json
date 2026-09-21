@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-thegamecreators-touchandgo-cc02971f",
+  "name": "Геймпад · курсор, нажатие и drag — Touch & Go",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.thegamecreators.TouchAndGo",
+    "bundleVersions": [
+      "1.1"
+    ],
+    "executableSha256": [
+      "cc02971f87a6f250af4347f49e8b97bb7f5f74033ba02ef59308d8665e094e84"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

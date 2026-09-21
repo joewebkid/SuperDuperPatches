@@ -1,0 +1,366 @@
+[
+  {
+    "title": "Imps In Tokyo",
+    "bundleId": "L9978CDJ43.com.wearevigilantes.imps",
+    "bundleVersion": "1.1.0.4",
+    "executableSha256": "91cf74a10d63326ca58d77573c0a3405e083ff85ea5d969f4b4ab9e2032fa461",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Tiny Wings",
+    "bundleId": "com.andreasilliger.tinywings",
+    "bundleVersion": "1.1.0",
+    "executableSha256": "00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "ElvenChronicles",
+    "bundleId": "com.bigbluebubble.ElvenChronicles",
+    "bundleVersion": "1.0",
+    "executableSha256": "08241911f191c11956d868bc114f0fadba3de9db827ca5810fe0f6d0b113dbec",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Infinity Blade",
+    "bundleId": "com.chairentertainment.birthright",
+    "bundleVersion": "7982.136",
+    "executableSha256": "450a2b34920d32e7afee188278f9e177541a2b6d9c62305a895c2db635b05b41",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Orions",
+    "bundleId": "com.chillingo.Orions",
+    "bundleVersion": "1.1",
+    "executableSha256": "c5f88dd5160b1404b4f0c01f0bb2b7ba244f8bd83bdad7d2178112aed0bde76d",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "feanor2i",
+    "bundleId": "com.com2us.feanor2",
+    "bundleVersion": "1.0.4",
+    "executableSha256": "c057c2b233e0a5fa7ecd094d4f01222d7b099b3aabb764fe205b0933426da9f9",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Inotia2",
+    "bundleId": "com.com2us.inotia",
+    "bundleVersion": "1.1.6",
+    "executableSha256": "7685df0750e07fed8d37db79ce133f8ef69475515a67a15cc3fd96969221f652",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Inotia3",
+    "bundleId": "com.com2us.inotia3",
+    "bundleVersion": "1.4.5.3",
+    "executableSha256": "ca2151027289bbaf4997924ce5dc54333314a9b3b4f06959ffcb2bf12f68c87b",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Traffic Rush",
+    "bundleId": "com.donutgames.trafficrush",
+    "bundleVersion": "1.32",
+    "executableSha256": "e25d7647863abe59d920d49232d521bfd54a83423edfe24f769d973b4a75aab3",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Red Alert",
+    "bundleId": "com.ea.candcra.row",
+    "bundleVersion": "1.1.0",
+    "executableSha256": "44d5d049a7524662418083f5c545576ea050ff4149c6aeac4b1406f80109d88f",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "MysteryMania",
+    "bundleId": "com.ea.mysterymania.inc",
+    "bundleVersion": "1.1.0 iPhoneCake.com",
+    "executableSha256": "bbabe6127eb29fe32a607937e1613c68925a7b3ffdea2bcc4ea7114f8eb59af7",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Hot Pursuit",
+    "bundleId": "com.ea.nfshp.ipad.inc",
+    "bundleVersion": "1.3.48",
+    "executableSha256": "37523440b6401d7119706b723bc9d6cfc9743a1b7770059abcb351c8b2e3a629",
+    "archiveStatus": "encrypted"
+  },
+  {
+    "title": "The Sims 3",
+    "bundleId": "com.ea.sims3inc",
+    "bundleVersion": "1.0.85",
+    "executableSha256": "b5c2dd38ccd00f8b8677c8ddf68d0064c0d77160e587485ef286e6257faba253",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Medieval",
+    "bundleId": "com.ea.simsmedieval.bv",
+    "bundleVersion": "1.0.1",
+    "executableSha256": "fdeab8dd92d566b74b21d4c3c2fd03a5b2e579a3a81e0f02bde42352b0aa7dc3",
+    "archiveStatus": "encrypted"
+  },
+  {
+    "title": "Wolf...RPG",
+    "bundleId": "com.eamobile.wolfbv",
+    "bundleVersion": "1.1.1",
+    "executableSha256": "83a719cd4779aa2a17946ba94822a4c03b992c417da5d12204702dc0d93fbff0",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Resurrection",
+    "bundleId": "com.escalationstudios.ResurrectionDoom",
+    "bundleVersion": "1.1",
+    "executableSha256": "131b9449af2dbf804330c23093c26ae87464c6b726bc5d1195a644760b88a43b",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "AmazingSpiderMan",
+    "bundleId": "com.gameloft.AmazingSpiderMan",
+    "bundleVersion": "1.0.3",
+    "executableSha256": "38832d6b998ca9ffa9f76fab9e1f312ea58316ed45e6aa380da0b5856044ce4f",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "BBD2",
+    "bundleId": "com.gameloft.BBD2",
+    "bundleVersion": "1.0.5",
+    "executableSha256": "f3e5ac001e6be50100cf95c35942a97fc34e5b7936af2b78639e3f58fa268c3b",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "BBD3",
+    "bundleId": "com.gameloft.BBD3",
+    "bundleVersion": "1.0.0",
+    "executableSha256": "63bb9ca6b02d4df5be9316142cc1555f8f650527964fc07353b91308ac1b9174",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Castle of Magic",
+    "bundleId": "com.gameloft.CastleofMagic",
+    "bundleVersion": "1.0.4",
+    "executableSha256": "ec34bcffb79aee03e62d40f93d54b314a4801c5d64930b67324ad25a7940de7c",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Dungeon",
+    "bundleId": "com.gameloft.DungeonHunterIPad",
+    "bundleVersion": "1.0.3",
+    "executableSha256": "592c4e82a21a5348a39626fb393b457406508472ddfc858ca3c3e7c4b507ca34",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "NOVA",
+    "bundleId": "com.gameloft.NOVA",
+    "bundleVersion": "1.1.0",
+    "executableSha256": "317c823c3d42fad2b0314f9a7e86b8906b5f68f8deeb6a26774a841c51d08447",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Starfront",
+    "bundleId": "com.gameloft.StarFrontiPad",
+    "bundleVersion": "1.0.0",
+    "executableSha256": "67a78b70ab85c4ad91a3ab46fc73068b0abe7febb7e8eb268388e2c395e2970a",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Terminator",
+    "bundleId": "com.gameloft.Terminator",
+    "bundleVersion": "1.0.4",
+    "executableSha256": "f406850b2fc8cc3dc4b72ebeb8f6ac2e8f60b28d5cc9f2f0e26e0e5d47bed473",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "ZombieInfection",
+    "bundleId": "com.gameloft.ZombieInfection",
+    "bundleVersion": "1.0.0",
+    "executableSha256": "3b90a5b51c89a12c56b267967e61083d9a03b9b06f2617ef5a8b2e32a9a2c7d8",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "dungeonhunter2iPad",
+    "bundleId": "com.gameloft.dungeonhunter2iPad",
+    "bundleVersion": "1.0.0",
+    "executableSha256": "81f61e897c79329342888c0dc60ed5905104f87bcda3d0970e183542c295e111",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "gangstar3",
+    "bundleId": "com.gameloft.gangstar3",
+    "bundleVersion": "1.4.11",
+    "executableSha256": "477e4131795ee22ab848153921eb05a89aae87dc325200a96da148afe73e75eb",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Scarface",
+    "bundleId": "com.go.starwave.scarface",
+    "bundleVersion": "1.0",
+    "executableSha256": "ee95c13a8b85c67657a39d743d6f9da9c4049595ae7429adcd704e26b8424e2c",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Linkin Park",
+    "bundleId": "com.hip.34110",
+    "bundleVersion": "1.5",
+    "executableSha256": "a6b679753dddb7ff07689304c2901c892dae15280ed0db8ac67af7817a3ba13b",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Rock Band",
+    "bundleId": "com.hip.683",
+    "bundleVersion": "1.3.55",
+    "executableSha256": "9ecf48506c79302cefd39b9fb43ef788e58034258093536570e6b39d9717766e",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "wolf3d+",
+    "bundleId": "com.idsoftware.wolf3d",
+    "bundleVersion": "1.2",
+    "executableSha256": "deaba9eb8161aa169bed74426455a8a6bc03e54efae9c9f98890d24db44fdef7",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Samurai",
+    "bundleId": "com.madfingergames.Samurai",
+    "bundleVersion": "1.5",
+    "executableSha256": "8bf065ea682aa3b85a031580960f43f1cad8f5376081ae242e77ae288e927d2a",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "ACE-Xi",
+    "bundleId": "com.namconetworks.AceCombatXi",
+    "bundleVersion": "1.1.3",
+    "executableSha256": "9ff36f1525925cd886490f6b0a1acaed4a510038e823e94b5f22d31d41f03873",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Monkey Ball",
+    "bundleId": "com.ooi.supermonkeyball",
+    "bundleVersion": "1.02",
+    "executableSha256": "3ed39f668b63c479d6bcda04f6bba00c9cf35b5c630bc475dca58879391058b2",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "AlienShooter",
+    "bundleId": "com.sigma-team.alienshootermobile",
+    "bundleVersion": "2015",
+    "executableSha256": "120d4fea2f1d1c18b19bd6db1859c6d77a55f813ad5257563beb0a310df2c101",
+    "archiveStatus": "unsupported-architecture"
+  },
+  {
+    "title": "Adventure",
+    "bundleId": "com.snowman.alto",
+    "bundleVersion": "2",
+    "executableSha256": "e513478b1d7458693de84cbe1024e0759f34c849699d4d721a36825e097766c5",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Coldplay",
+    "bundleId": "com.tapulous.coldplay",
+    "bundleVersion": "1.0",
+    "executableSha256": "ce2554993e8e1aee01044b20b7f8de97849dbfee35d26768d9d567f227f35136",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Metallica",
+    "bundleId": "com.tapulous.metallica",
+    "bundleVersion": "1.0 iPhoneCake.com",
+    "executableSha256": "ef3595e53bd8cd2aaf477e42a6f6629c87c4198059a4e6bcf0a2ff6c257c547c",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Nirvana",
+    "bundleId": "com.tapulous.nirvana",
+    "bundleVersion": "1.0",
+    "executableSha256": "2b32a35d5ab466e8d6e4e6fe22bbad5d6e4b964cbdd17cf2cbe990ed9d836675",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Tap Tap",
+    "bundleId": "com.tapulous.taptaptour",
+    "bundleVersion": "2723",
+    "executableSha256": "d22d6a7f727f8c5f30459f4729e09a3e4987158fc510c1ecde17d24fb9bbde7f",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Touch & Go",
+    "bundleId": "com.thegamecreators.TouchAndGo",
+    "bundleVersion": "1.1",
+    "executableSha256": "cc02971f87a6f250af4347f49e8b97bb7f5f74033ba02ef59308d8665e094e84",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "A.Surgeon",
+    "bundleId": "com.turner.AmateurSurgeon",
+    "bundleVersion": "1.1.9",
+    "executableSha256": "3486de6e3dbb2738b0f2a1417974d5f7c2ea059865c427af5f8e003b3541ac0d",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "CBNK 3D",
+    "bundleId": "com.vgmobile.cnk2",
+    "bundleVersion": "1.0",
+    "executableSha256": "d441aad929068023dfa807ab1e4152a12df2f59e89c39f9b1024c5693b95f87c",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "VoiceBand",
+    "bundleId": "com.wavemachine.voiceband",
+    "bundleVersion": "1.1",
+    "executableSha256": "bfb6d020d54762e8daf7f701da812a0542d7abfd8694506dc7015608ec6bc22e",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "The Quest HD",
+    "bundleId": "hu.redshift.The-Quest-HD",
+    "bundleVersion": "8",
+    "executableSha256": "ec0589eda14838d8f15fc68a9df70db8d7ba8e1ed39678880e74dd9c259311d6",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "resident evil DEGENERATION",
+    "bundleId": "jp.co.capcom.residentevil.en",
+    "bundleVersion": "1.03.00",
+    "executableSha256": "9e451d0bbdf4aff2e5ad40eabb577e474464ca855dc41375845e4a54f73a5267",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "CK 3",
+    "bundleId": "pl.idreams.CanKnockdown3",
+    "bundleVersion": "1.30",
+    "executableSha256": "d85bbf6d6691a43d36f8eddd1d2aea9a8ba9e5cbf04e10721c71af35f48ae564",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Star Drift",
+    "bundleId": "uk.co.squareheadstudios.stardrift",
+    "bundleVersion": "1.0.4",
+    "executableSha256": "f8e263474a0867cf4714bd614deb2df58cb472f32d65cb5ddac569ffc50a8dc3",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "GalaxyOnFire",
+    "bundleId": "www.fishlabs.net.GalaxyOnFire",
+    "bundleVersion": "1.1.5",
+    "executableSha256": "be45cd232b742ed1a14d99e00b07b5772147fe0b7b1ad6c21fe22c863d4e0cb5",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "GOF2 HD",
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersion": "1.1.10",
+    "executableSha256": "03dfc6e7045b640d15aa9c27dc69142df61fd3a3a0806efc48f6c0b14eb20ca6",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "GOF2 HD",
+    "bundleId": "www.fishlabs.net.gof2hd",
+    "bundleVersion": "1.1.4",
+    "executableSha256": "74ece5bedf561eed4e71b8d0b875e201c47858a2649a59d65af57390a0554958",
+    "archiveStatus": "candidate"
+  },
+  {
+    "title": "Snowboard",
+    "bundleId": "www.fishlabs.net.sbh",
+    "bundleVersion": "1.6",
+    "executableSha256": "08351e14ee38fec9946efc2cd06a4010cce013a6c8cc95e99ca19b8380f7d154",
+    "archiveStatus": "candidate"
+  }
+]

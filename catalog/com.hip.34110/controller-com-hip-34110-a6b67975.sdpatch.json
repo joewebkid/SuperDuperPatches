@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-hip-34110-a6b67975",
+  "name": "Геймпад · курсор, нажатие и drag — Linkin Park",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.hip.34110",
+    "bundleVersions": [
+      "1.5"
+    ],
+    "executableSha256": [
+      "a6b679753dddb7ff07689304c2901c892dae15280ed0db8ac67af7817a3ba13b"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

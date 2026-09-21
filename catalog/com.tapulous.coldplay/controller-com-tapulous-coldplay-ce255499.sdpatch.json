@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-tapulous-coldplay-ce255499",
+  "name": "Геймпад · курсор, нажатие и drag — Coldplay",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.tapulous.coldplay",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "ce2554993e8e1aee01044b20b7f8de97849dbfee35d26768d9d567f227f35136"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

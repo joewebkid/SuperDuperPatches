@@ -1,0 +1,50 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-vgmobile-cnk2-d441aad9",
+  "name": "Геймпад · игровая раскладка — CBNK 3D",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.vgmobile.cnk2",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "d441aad929068023dfa807ab1e4152a12df2f59e89c39f9b1024c5693b95f87c"
+    ]
+  },
+  "actions": {
+    "input": {
+      "buttons": [
+        {
+          "button": "A",
+          "x": 240,
+          "y": 160
+        },
+        {
+          "button": "B",
+          "x": 240,
+          "y": 310
+        },
+        {
+          "button": "Start",
+          "x": 10,
+          "y": 310
+        },
+        {
+          "button": "Y",
+          "x": 470,
+          "y": 310
+        },
+        {
+          "button": "X",
+          "x": 446,
+          "y": 30
+        }
+      ]
+    }
+  }
+}

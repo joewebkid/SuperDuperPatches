@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-snowman-alto-e513478b",
+  "name": "Геймпад · курсор, нажатие и drag — Adventure",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.snowman.alto",
+    "bundleVersions": [
+      "2"
+    ],
+    "executableSha256": [
+      "e513478b1d7458693de84cbe1024e0759f34c849699d4d721a36825e097766c5"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

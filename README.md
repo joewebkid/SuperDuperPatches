@@ -1,5 +1,12 @@
 # Super Duper Patches
 
+Public catalog: https://joewebkid.github.io/SuperDuperPatches/ .
+The machine-readable discovery file is `remote-index.json`; each manifest is
+published at its `catalog/…` path with an exact SHA-256 and byte length.
+Downloading a manifest does not enable it: newly fetched unsigned patches
+require an explicit per-game opt-in. Automatic trust and binary overlays still
+require the signed-catalog design in `docs/TRUSTED_CATALOG.md`.
+
 This is the source tree for the standalone `SuperDuperPatches` catalog. It
 contains declarative compatibility metadata only. The emulator
 embeds the verified built-in subset at compile time; a later release may fetch
@@ -12,8 +19,9 @@ a signed index without allowing downloaded native code to execute.
 | `compatibility` | Selects typed EAGL, UIKit, GL and audio policies | No |
 | `presentation-layout` | Aspect, widescreen and HUD layout policies | No |
 | `input` | Gamepad-to-touch, swipe, pinch and tilt layouts | No |
-| `resource-mod` | User-installed texture/audio/resource overlay | No |
-| `binary` | Version-specific byte patch, reserved for a later audited format | Never in v1 |
+| `resource-mod` | Backward-compatible `.sdmod` v1 resource replacement | No |
+| `overlay-mod` | Ordered `.sdmod` v2 replace/VCDIFF overlay | No |
+| `binary` | Catalog metadata for a typed binary policy; bytes live only in verified `.sdmod` v2 VCDIFF | No |
 
 Do not publish IPA files, decrypted executables, save data, extracted game
 assets, album art or other copyrighted payloads here. A resource mod may link
@@ -25,7 +33,12 @@ redistribute every included file.
 ```text
 catalog/<bundle-id>/<patch-id>.sdpatch.json
 schema/sdpatch-v1.schema.json
+schema/sdmod-v1.schema.json
+schema/sdmod-v2.schema.json
 scripts/validate_catalog.py
+scripts/validate_sdmod.py
+scripts/build_sdmod.py
+scripts/make_vcdiff.py
 templates/
 index.json
 ```
@@ -61,6 +74,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the review workflow and
 [docs/FORMAT.md](docs/FORMAT.md) for action design rules. The full Android to
 draft-PR path is documented in
 [docs/COMMUNITY_SUBMISSIONS.md](docs/COMMUNITY_SUBMISSIONS.md).
+The separate resource package boundary and implemented Android runtime are
+documented in [docs/MOD_FORMAT.md](docs/MOD_FORMAT.md).
+The deliberately not-yet-enabled signed remote path is documented in
+[docs/TRUSTED_CATALOG.md](docs/TRUSTED_CATALOG.md).
 
 ## Submission from the Android app
 
@@ -72,5 +89,7 @@ validates it again, adds only the manifest plus `index.json`, and opens a draft
 pull request. No GitHub token or repository write credential is embedded in
 the APK.
 
-Community manifests always start as `experimental` and disabled by default.
+Community manifests for every implemented v1 `sdpatch` action can be generated
+from the current profile: compatibility, presentation layout and input.
+Manifests always start as `experimental` and disabled by default.
 The generated PR still requires evidence and maintainer review before merge.

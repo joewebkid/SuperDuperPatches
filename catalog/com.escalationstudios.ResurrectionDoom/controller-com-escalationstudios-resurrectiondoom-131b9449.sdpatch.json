@@ -1,0 +1,64 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-escalationstudios-resurrectiondoom-131b9449",
+  "name": "Геймпад · Doom: бой и меню (480×320, тестовая)",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.escalationstudios.ResurrectionDoom",
+    "bundleVersions": [
+      "1.1"
+    ],
+    "executableSha256": [
+      "131b9449af2dbf804330c23093c26ae87464c6b726bc5d1195a644760b88a43b"
+    ]
+  },
+  "actions": {
+    "input": {
+      "leftDeadzone": 0.12,
+      "rightDeadzone": 0.15,
+      "accelerometerMode": "gamepad",
+      "tiltStick": "left",
+      "cursorStick": "right",
+      "cursorMode": "relative",
+      "cursorClickButton": "A",
+      "landscapeLayout": {
+        "buttons": [
+          {
+            "button": "RightShoulder",
+            "x": 430,
+            "y": 290
+          },
+          {
+            "button": "LeftShoulder",
+            "x": 45,
+            "y": 290
+          },
+          {
+            "button": "X",
+            "x": 425,
+            "y": 45
+          },
+          {
+            "button": "Y",
+            "x": 75,
+            "y": 30
+          },
+          {
+            "button": "Start",
+            "x": 145,
+            "y": 20
+          },
+          {
+            "button": "B",
+            "x": 240,
+            "y": 270
+          }
+        ]
+      }
+    }
+  }
+}

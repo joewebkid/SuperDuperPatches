@@ -18,4 +18,7 @@ jobs:
           python-version: "3.12"
       - run: pip install check-jsonschema==0.31.3
       - run: find catalog -name '*.sdpatch.json' -print0 | xargs -0 check-jsonschema --schemafile schema/sdpatch-v1.schema.json
+      - run: check-jsonschema --schemafile schema/sdmod-v1.schema.json templates/resource.sdmod.json
+      - run: check-jsonschema --schemafile schema/sdmod-v2.schema.json templates/ordered-overlay-v2.sdmod.json
       - run: python scripts/validate_catalog.py
+      - run: python -m unittest discover -s scripts -p 'test_*.py'

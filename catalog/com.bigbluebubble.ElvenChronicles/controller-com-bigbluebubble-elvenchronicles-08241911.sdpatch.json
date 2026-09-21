@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-bigbluebubble-elvenchronicles-08241911",
+  "name": "Геймпад · курсор, нажатие и drag — ElvenChronicles",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.bigbluebubble.ElvenChronicles",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "08241911f191c11956d868bc114f0fadba3de9db827ca5810fe0f6d0b113dbec"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

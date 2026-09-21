@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-uk-co-squareheadstudios-stardrift-f8e26347",
+  "name": "Геймпад · курсор, нажатие и drag — Star Drift",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "uk.co.squareheadstudios.stardrift",
+    "bundleVersions": [
+      "1.0.4"
+    ],
+    "executableSha256": [
+      "f8e263474a0867cf4714bd614deb2df58cb472f32d65cb5ddac569ffc50a8dc3"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

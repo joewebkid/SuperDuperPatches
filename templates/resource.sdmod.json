@@ -1,0 +1,43 @@
+{
+  "$schema": "../schema/sdmod-v1.schema.json",
+  "formatVersion": 1,
+  "id": "com.example.game.hd-textures",
+  "name": "Example HD texture pack",
+  "version": "1.0.0",
+  "kind": "resource-mod",
+  "priority": 100,
+  "engine": {
+    "resourceOverlayApi": 1,
+    "minimumVersion": "0.2.3"
+  },
+  "target": {
+    "bundleId": "com.example.game",
+    "bundleVersions": ["1.0"],
+    "executableSha256": [
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ]
+  },
+  "budgets": {
+    "payloadBytes": 1048576,
+    "maximumResidentBytes": 4194304
+  },
+  "license": {
+    "redistributable": true,
+    "name": "Replace with the actual licence",
+    "attribution": "Replace with author and redistribution evidence"
+  },
+  "dependsOn": [],
+  "conflictsWith": [],
+  "resources": [
+    {
+      "guestPath": "Textures/example.png",
+      "sourceSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "payloadPath": "payload/2222222222222222222222222222222222222222222222222222222222222222.png",
+      "replacementSha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "payloadBytes": 1048576,
+      "maximumResidentBytes": 4194304,
+      "mediaType": "image/png"
+    }
+  ]
+}
+

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-go-starwave-scarface-ee95c13a",
+  "name": "Геймпад · курсор, нажатие и drag — Scarface",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.go.starwave.scarface",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "ee95c13a8b85c67657a39d743d6f9da9c4049595ae7429adcd704e26b8424e2c"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

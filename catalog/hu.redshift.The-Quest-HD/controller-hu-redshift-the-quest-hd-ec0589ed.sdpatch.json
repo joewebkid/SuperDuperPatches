@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-hu-redshift-the-quest-hd-ec0589ed",
+  "name": "Геймпад · курсор, нажатие и drag — The Quest HD",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "hu.redshift.The-Quest-HD",
+    "bundleVersions": [
+      "8"
+    ],
+    "executableSha256": [
+      "ec0589eda14838d8f15fc68a9df70db8d7ba8e1ed39678880e74dd9c259311d6"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

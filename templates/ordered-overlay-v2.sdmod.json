@@ -1,0 +1,51 @@
+{
+  "$schema": "../schema/sdmod-v2.schema.json",
+  "formatVersion": 2,
+  "id": "com.example.game.community-fix",
+  "name": "Example ordered overlay",
+  "version": "1.0.0",
+  "kind": "overlay-mod",
+  "priority": 100,
+  "engine": {
+    "overlayApi": 2,
+    "minimumVersion": "0.2.3"
+  },
+  "target": {
+    "bundleId": "com.example.game",
+    "bundleVersions": ["1.0"],
+    "ipaSha256": [
+      "0000000000000000000000000000000000000000000000000000000000000000"
+    ],
+    "executableSha256": [
+      "1111111111111111111111111111111111111111111111111111111111111111"
+    ]
+  },
+  "budgets": {
+    "payloadBytes": 4096,
+    "maximumOutputBytes": 1048576,
+    "maximumResidentBytes": 3145728
+  },
+  "license": {
+    "redistributable": true,
+    "name": "Replace with the actual licence",
+    "attribution": "Replace with author and redistribution evidence"
+  },
+  "dependsOn": [],
+  "conflictsWith": [],
+  "overlays": [
+    {
+      "type": "vcdiff",
+      "targetClass": "macho",
+      "guestPath": "ExampleGame",
+      "sourceSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+      "resultSha256": "2222222222222222222222222222222222222222222222222222222222222222",
+      "payloadPath": "payload/3333333333333333333333333333333333333333333333333333333333333333.vcdiff",
+      "payloadSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+      "payloadBytes": 4096,
+      "resultBytes": 1048576,
+      "maximumResidentBytes": 3145728,
+      "mediaType": "application/vnd.superduper.vcdiff",
+      "vcdiffProfile": "rfc3284-xdelta3-no-extensions"
+    }
+  ]
+}

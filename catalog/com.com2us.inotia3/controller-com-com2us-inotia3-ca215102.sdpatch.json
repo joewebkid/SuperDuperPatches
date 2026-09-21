@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-com2us-inotia3-ca215102",
+  "name": "Геймпад · курсор, нажатие и drag — Inotia3",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.com2us.inotia3",
+    "bundleVersions": [
+      "1.4.5.3"
+    ],
+    "executableSha256": [
+      "ca2151027289bbaf4997924ce5dc54333314a9b3b4f06959ffcb2bf12f68c87b"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

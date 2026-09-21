@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-wavemachine-voiceband-bfb6d020",
+  "name": "Геймпад · курсор, нажатие и drag — VoiceBand",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.wavemachine.voiceband",
+    "bundleVersions": [
+      "1.1"
+    ],
+    "executableSha256": [
+      "bfb6d020d54762e8daf7f701da812a0542d7abfd8694506dc7015608ec6bc22e"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

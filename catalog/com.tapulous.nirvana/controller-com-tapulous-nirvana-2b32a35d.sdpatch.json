@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-tapulous-nirvana-2b32a35d",
+  "name": "Геймпад · курсор, нажатие и drag — Nirvana",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.tapulous.nirvana",
+    "bundleVersions": [
+      "1.0"
+    ],
+    "executableSha256": [
+      "2b32a35d5ab466e8d6e4e6fe22bbad5d6e4b964cbdd17cf2cbe990ed9d836675"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

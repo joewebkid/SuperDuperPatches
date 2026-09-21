@@ -1,0 +1,42 @@
+{
+  "$schema": "../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "vendor-game-controller-layout",
+  "name": "Human-readable controller layout",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.vendor.game",
+    "bundleVersions": ["1.0"],
+    "executableSha256": ["0000000000000000000000000000000000000000000000000000000000000000"],
+    "allowLegacyWeakMatch": false
+  },
+  "actions": {
+    "input": {
+      "buttons": [
+        { "button": "A", "x": 420, "y": 280 },
+        { "button": "Start", "x": 20, "y": 20 }
+      ],
+      "leftStickToTouch": { "x": 25, "y": 200, "width": 95, "height": 100 },
+      "portraitLayout": {
+        "buttons": [
+          { "button": "A", "x": 240, "y": 420 }
+        ],
+        "leftStickToTouch": { "x": 25, "y": 330, "width": 95, "height": 100 }
+      },
+      "landscapeLayout": {
+        "buttons": [
+          { "button": "A", "x": 420, "y": 280 }
+        ],
+        "leftStickToTouch": { "x": 25, "y": 200, "width": 95, "height": 100 }
+      },
+      "leftDeadzone": 0.1,
+      "rightDeadzone": 0.15,
+      "accelerometerMode": "device",
+      "tiltStick": "none",
+      "cursorStick": "right"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-donutgames-trafficrush-e25d7647",
+  "name": "Геймпад · курсор, нажатие и drag — Traffic Rush",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.donutgames.trafficrush",
+    "bundleVersions": [
+      "1.32"
+    ],
+    "executableSha256": [
+      "e25d7647863abe59d920d49232d521bfd54a83423edfe24f769d973b4a75aab3"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

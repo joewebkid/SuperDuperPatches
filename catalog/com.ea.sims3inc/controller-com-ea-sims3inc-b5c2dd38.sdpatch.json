@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-ea-sims3inc-b5c2dd38",
+  "name": "Геймпад · курсор, нажатие и drag — The Sims 3",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.sims3inc",
+    "bundleVersions": [
+      "1.0.85"
+    ],
+    "executableSha256": [
+      "b5c2dd38ccd00f8b8677c8ddf68d0064c0d77160e587485ef286e6257faba253"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

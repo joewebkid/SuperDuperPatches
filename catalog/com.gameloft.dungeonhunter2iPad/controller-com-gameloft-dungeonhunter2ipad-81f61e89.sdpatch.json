@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-dungeonhunter2ipad-81f61e89",
+  "name": "Геймпад · курсор, нажатие и drag — dungeonhunter2iPad",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.dungeonhunter2iPad",
+    "bundleVersions": [
+      "1.0.0"
+    ],
+    "executableSha256": [
+      "81f61e897c79329342888c0dc60ed5905104f87bcda3d0970e183542c295e111"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

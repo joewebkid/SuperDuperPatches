@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-chairentertainment-birthright-450a2b34",
+  "name": "Геймпад · курсор, нажатие и drag — Infinity Blade",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.chairentertainment.birthright",
+    "bundleVersions": [
+      "7982.136"
+    ],
+    "executableSha256": [
+      "450a2b34920d32e7afee188278f9e177541a2b6d9c62305a895c2db635b05b41"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

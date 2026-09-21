@@ -1,0 +1,26 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "tiny-wings-true-widescreen",
+  "name": "Tiny Wings — True Widescreen",
+  "kind": "presentation-layout",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 110,
+  "target": {
+    "bundleId": "com.andreasilliger.tinywings",
+    "bundleVersions": [
+      "1.1.0"
+    ],
+    "executableSha256": [
+      "00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13"
+    ]
+  },
+  "actions": {
+    "presentation": {
+      "outputFit": "aspect-fit",
+      "virtualScreen": "host-aspect",
+      "forceVirtualScreenViewBounds": true
+    }
+  }
+}

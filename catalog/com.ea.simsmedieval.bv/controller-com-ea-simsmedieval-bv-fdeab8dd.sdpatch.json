@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-ea-simsmedieval-bv-fdeab8dd",
+  "name": "Геймпад · курсор, нажатие и drag — Medieval",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.simsmedieval.bv",
+    "bundleVersions": [
+      "1.0.1"
+    ],
+    "executableSha256": [
+      "fdeab8dd92d566b74b21d4c3c2fd03a5b2e579a3a81e0f02bde42352b0aa7dc3"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

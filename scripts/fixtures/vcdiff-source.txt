@@ -1,0 +1,2 @@
+Super Duper ordered overlay source v1
+Resources stay outside the clean IPA.

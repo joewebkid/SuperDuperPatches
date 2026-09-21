@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-pl-idreams-canknockdown3-d85bbf6d",
+  "name": "Геймпад · курсор, нажатие и drag — CK 3",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "pl.idreams.CanKnockdown3",
+    "bundleVersions": [
+      "1.30"
+    ],
+    "executableSha256": [
+      "d85bbf6d6691a43d36f8eddd1d2aea9a8ba9e5cbf04e10721c71af35f48ae564"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

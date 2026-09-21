@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Super Duper — игровые патчи</title>
+<style>
+body{font:16px/1.5 system-ui,sans-serif;background:#10151c;color:#edf2f8;max-width:920px;margin:40px auto;padding:0 20px}
+a{color:#91cbff}input{box-sizing:border-box;width:100%;padding:12px;background:#1c2633;color:inherit;border:1px solid #405064;border-radius:8px}
+li{padding:12px 0;border-bottom:1px solid #35404b}small{display:block;color:#a8b6c4}h1{line-height:1.2}
+</style>
+<h1>Игровые патчи Super Duper</h1>
+<p>Только метаданные и типизированные действия. Исходные IPA и сохранения не публикуются. Скачанные патчи проверяются для конкретной версии игры; неподписанные новые патчи требуют включения в профиле.</p>
+<p><a href="remote-index.json">Машинный каталог</a> · <a href="https://github.com/joewebkid/SuperDuperPatches">Исходный репозиторий</a></p>
+<input id="search" type="search" placeholder="Название игры или патча" aria-label="Поиск патча">
+<p id="count">Загрузка…</p><ul id="list"></ul>
+<script>
+fetch('remote-index.json').then(r=>{if(!r.ok)throw Error(r.status);return r.json()}).then(data=>{
+const search=document.getElementById('search'),list=document.getElementById('list'),count=document.getElementById('count');
+function render(){const q=search.value.toLowerCase();list.replaceChildren();const matches=data.patches.filter(p=>(p.id+' '+p.bundleId).toLowerCase().includes(q));
+for(const p of matches){const li=document.createElement('li'),a=document.createElement('a'),meta=document.createElement('small');a.href=p.path;a.textContent=p.id;meta.textContent=p.bundleId+' · '+p.bundleVersions.join(', ')+' · '+p.kind;li.append(a,meta);list.append(li)}count.textContent=matches.length+' патчей'}search.addEventListener('input',render);render()
+}).catch(()=>document.getElementById('count').textContent='Каталог временно недоступен');
+</script>
+</html>

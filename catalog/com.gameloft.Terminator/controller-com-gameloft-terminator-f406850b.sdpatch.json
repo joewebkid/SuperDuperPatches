@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-terminator-f406850b",
+  "name": "Геймпад · курсор, нажатие и drag — Terminator",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.Terminator",
+    "bundleVersions": [
+      "1.0.4"
+    ],
+    "executableSha256": [
+      "f406850b2fc8cc3dc4b72ebeb8f6ac2e8f60b28d5cc9f2f0e26e0e5d47bed473"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

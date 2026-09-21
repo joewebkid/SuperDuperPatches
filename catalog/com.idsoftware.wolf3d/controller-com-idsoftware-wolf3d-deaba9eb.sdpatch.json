@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-idsoftware-wolf3d-deaba9eb",
+  "name": "Геймпад · курсор, нажатие и drag — wolf3d+",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.idsoftware.wolf3d",
+    "bundleVersions": [
+      "1.2"
+    ],
+    "executableSha256": [
+      "deaba9eb8161aa169bed74426455a8a6bc03e54efae9c9f98890d24db44fdef7"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

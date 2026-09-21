@@ -1,0 +1,22 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "doom-resurrection-widescreen-stretch",
+  "name": "Doom Resurrection widescreen stretch",
+  "kind": "presentation-layout",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 110,
+  "target": {
+    "bundleId": "com.escalationstudios.ResurrectionDoom",
+    "bundleVersions": ["1.1"],
+    "executableSha256": [
+      "131b9449af2dbf804330c23093c26ae87464c6b726bc5d1195a644760b88a43b"
+    ]
+  },
+  "actions": {
+    "presentation": {
+      "outputFit": "stretch"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-com2us-feanor2-c057c2b2",
+  "name": "Геймпад · курсор, нажатие и drag — feanor2i",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.com2us.feanor2",
+    "bundleVersions": [
+      "1.0.4"
+    ],
+    "executableSha256": [
+      "c057c2b233e0a5fa7ecd094d4f01222d7b099b3aabb764fe205b0933426da9f9"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-jp-co-capcom-residentevil-en-9e451d0b",
+  "name": "Геймпад · игровая раскладка — resident evil DEGENERATION",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "jp.co.capcom.residentevil.en",
+    "bundleVersions": [
+      "1.03.00"
+    ],
+    "executableSha256": [
+      "9e451d0bbdf4aff2e5ad40eabb577e474464ca855dc41375845e4a54f73a5267"
+    ]
+  },
+  "actions": {
+    "input": {
+      "stabilizeVirtualCursor": {
+        "smoothingStrength": 0.1,
+        "stickyRadius": 10
+      },
+      "buttons": [
+        {
+          "button": "A",
+          "x": 430,
+          "y": 280
+        },
+        {
+          "button": "B",
+          "x": 440,
+          "y": 200
+        },
+        {
+          "button": "Y",
+          "x": 440,
+          "y": 100
+        },
+        {
+          "button": "Start",
+          "x": 30,
+          "y": 30
+        }
+      ],
+      "dpadToTouch": {
+        "x": 25,
+        "y": 200,
+        "width": 95,
+        "height": 100
+      },
+      "leftStickToTouch": {
+        "x": 25,
+        "y": 200,
+        "width": 95,
+        "height": 100
+      }
+    }
+  }
+}

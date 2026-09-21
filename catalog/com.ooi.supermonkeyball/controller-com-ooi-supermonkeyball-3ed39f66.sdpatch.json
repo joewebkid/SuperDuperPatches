@@ -1,0 +1,36 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-ooi-supermonkeyball-3ed39f66",
+  "name": "Геймпад · игровая раскладка — Monkey Ball",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ooi.supermonkeyball",
+    "bundleVersions": [
+      "1.02"
+    ],
+    "executableSha256": [
+      "3ed39f668b63c479d6bcda04f6bba00c9cf35b5c630bc475dca58879391058b2"
+    ]
+  },
+  "actions": {
+    "input": {
+      "yTiltOffset": 24,
+      "buttons": [
+        {
+          "button": "B",
+          "x": 470,
+          "y": 160
+        },
+        {
+          "button": "Start",
+          "x": 240,
+          "y": 10
+        }
+      ]
+    }
+  }
+}

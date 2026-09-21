@@ -3,8 +3,449 @@
   "generated": false,
   "patches": [
     {
+      "id": "spider-man-103-orientation",
+      "path": "catalog/com.gameloft.AmazingSpiderMan/spider-man-103-orientation.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
       "id": "inotia1-present-flip",
       "path": "catalog/com.com2us.feanor2/inotia1-present-flip.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "galaxy-on-fire-controller",
+      "path": "catalog/www.fishlabs.net.GalaxyOnFire/galaxy-on-fire-controller.sdpatch.json",
+      "kind": "input",
+      "status": "verified",
+      "defaultEnabled": true
+    },
+    {
+      "id": "doom-resurrection-orientation",
+      "path": "catalog/com.escalationstudios.ResurrectionDoom/doom-resurrection-orientation.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "doom-resurrection-widescreen-stretch",
+      "path": "catalog/com.escalationstudios.ResurrectionDoom/doom-resurrection-widescreen-stretch.sdpatch.json",
+      "kind": "presentation-layout",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "gof2-inactive-vertex-attributes",
+      "path": "catalog/www.fishlabs.net.gof2hd/gof2-inactive-vertex-attributes.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "gof2-sampler-array-collision",
+      "path": "catalog/www.fishlabs.net.gof2hd/gof2-sampler-array-collision.sdpatch.json",
+      "kind": "compatibility",
+      "status": "verified",
+      "defaultEnabled": true
+    },
+    {
+      "id": "gof2-gamecenter-achievements",
+      "path": "catalog/www.fishlabs.net.gof2hd/gof2-gamecenter-achievements.sdpatch.json",
+      "kind": "achievement",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "gof2-widescreen-stretch",
+      "path": "catalog/www.fishlabs.net.gof2hd/gof2-widescreen-stretch.sdpatch.json",
+      "kind": "presentation-layout",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "gof2-true-widescreen",
+      "path": "catalog/www.fishlabs.net.gof2hd/gof2-true-widescreen.sdpatch.json",
+      "kind": "presentation-layout",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "starfront-ipad-landscape",
+      "path": "catalog/com.gameloft.StarFrontiPad/starfront-ipad-landscape.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1",
+      "path": "catalog/L9978CDJ43.com.wearevigilantes.imps/controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-andreasilliger-tinywings-00e6229a",
+      "path": "catalog/com.andreasilliger.tinywings/controller-com-andreasilliger-tinywings-00e6229a.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "tiny-wings-true-widescreen",
+      "path": "catalog/com.andreasilliger.tinywings/tiny-wings-true-widescreen.sdpatch.json",
+      "kind": "presentation-layout",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-bigbluebubble-elvenchronicles-08241911",
+      "path": "catalog/com.bigbluebubble.ElvenChronicles/controller-com-bigbluebubble-elvenchronicles-08241911.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-chairentertainment-birthright-450a2b34",
+      "path": "catalog/com.chairentertainment.birthright/controller-com-chairentertainment-birthright-450a2b34.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-chillingo-orions-c5f88dd5",
+      "path": "catalog/com.chillingo.Orions/controller-com-chillingo-orions-c5f88dd5.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-com2us-feanor2-c057c2b2",
+      "path": "catalog/com.com2us.feanor2/controller-com-com2us-feanor2-c057c2b2.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-com2us-inotia-7685df07",
+      "path": "catalog/com.com2us.inotia/controller-com-com2us-inotia-7685df07.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-com2us-inotia3-ca215102",
+      "path": "catalog/com.com2us.inotia3/controller-com-com2us-inotia3-ca215102.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-donutgames-trafficrush-e25d7647",
+      "path": "catalog/com.donutgames.trafficrush/controller-com-donutgames-trafficrush-e25d7647.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-ea-candcra-row-44d5d049",
+      "path": "catalog/com.ea.candcra.row/controller-com-ea-candcra-row-44d5d049.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-ea-mysterymania-inc-bbabe612",
+      "path": "catalog/com.ea.mysterymania.inc/controller-com-ea-mysterymania-inc-bbabe612.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-ea-nfshp-ipad-inc-37523440",
+      "path": "catalog/com.ea.nfshp.ipad.inc/controller-com-ea-nfshp-ipad-inc-37523440.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-ea-sims3inc-b5c2dd38",
+      "path": "catalog/com.ea.sims3inc/controller-com-ea-sims3inc-b5c2dd38.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-ea-simsmedieval-bv-fdeab8dd",
+      "path": "catalog/com.ea.simsmedieval.bv/controller-com-ea-simsmedieval-bv-fdeab8dd.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-eamobile-wolfbv-83a719cd",
+      "path": "catalog/com.eamobile.wolfbv/controller-com-eamobile-wolfbv-83a719cd.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-com-escalationstudios-resurrectiondoom-131b9449",
+      "path": "catalog/com.escalationstudios.ResurrectionDoom/controller-com-escalationstudios-resurrectiondoom-131b9449.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-amazingspiderman-38832d6b",
+      "path": "catalog/com.gameloft.AmazingSpiderMan/controller-com-gameloft-amazingspiderman-38832d6b.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-bbd2-f3e5ac00",
+      "path": "catalog/com.gameloft.BBD2/controller-com-gameloft-bbd2-f3e5ac00.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-bbd3-63bb9ca6",
+      "path": "catalog/com.gameloft.BBD3/controller-com-gameloft-bbd3-63bb9ca6.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-castleofmagic-ec34bcff",
+      "path": "catalog/com.gameloft.CastleofMagic/controller-com-gameloft-castleofmagic-ec34bcff.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-dungeonhunteripad-592c4e82",
+      "path": "catalog/com.gameloft.DungeonHunterIPad/controller-com-gameloft-dungeonhunteripad-592c4e82.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-nova-317c823c",
+      "path": "catalog/com.gameloft.NOVA/controller-com-gameloft-nova-317c823c.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-starfrontipad-67a78b70",
+      "path": "catalog/com.gameloft.StarFrontiPad/controller-com-gameloft-starfrontipad-67a78b70.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-terminator-f406850b",
+      "path": "catalog/com.gameloft.Terminator/controller-com-gameloft-terminator-f406850b.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-zombieinfection-3b90a5b5",
+      "path": "catalog/com.gameloft.ZombieInfection/controller-com-gameloft-zombieinfection-3b90a5b5.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-dungeonhunter2ipad-81f61e89",
+      "path": "catalog/com.gameloft.dungeonhunter2iPad/controller-com-gameloft-dungeonhunter2ipad-81f61e89.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-gameloft-gangstar3-477e4131",
+      "path": "catalog/com.gameloft.gangstar3/controller-com-gameloft-gangstar3-477e4131.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-go-starwave-scarface-ee95c13a",
+      "path": "catalog/com.go.starwave.scarface/controller-com-go-starwave-scarface-ee95c13a.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-hip-34110-a6b67975",
+      "path": "catalog/com.hip.34110/controller-com-hip-34110-a6b67975.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-hip-683-9ecf4850",
+      "path": "catalog/com.hip.683/controller-com-hip-683-9ecf4850.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-idsoftware-wolf3d-deaba9eb",
+      "path": "catalog/com.idsoftware.wolf3d/controller-com-idsoftware-wolf3d-deaba9eb.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-madfingergames-samurai-8bf065ea",
+      "path": "catalog/com.madfingergames.Samurai/controller-com-madfingergames-samurai-8bf065ea.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-namconetworks-acecombatxi-9ff36f15",
+      "path": "catalog/com.namconetworks.AceCombatXi/controller-com-namconetworks-acecombatxi-9ff36f15.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-com-ooi-supermonkeyball-3ed39f66",
+      "path": "catalog/com.ooi.supermonkeyball/controller-com-ooi-supermonkeyball-3ed39f66.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-com-sigma-team-alienshootermobile-120d4fea",
+      "path": "catalog/com.sigma-team.alienshootermobile/controller-com-sigma-team-alienshootermobile-120d4fea.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-snowman-alto-e513478b",
+      "path": "catalog/com.snowman.alto/controller-com-snowman-alto-e513478b.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-tapulous-coldplay-ce255499",
+      "path": "catalog/com.tapulous.coldplay/controller-com-tapulous-coldplay-ce255499.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-tapulous-metallica-ef3595e5",
+      "path": "catalog/com.tapulous.metallica/controller-com-tapulous-metallica-ef3595e5.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-tapulous-nirvana-2b32a35d",
+      "path": "catalog/com.tapulous.nirvana/controller-com-tapulous-nirvana-2b32a35d.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-tapulous-taptaptour-d22d6a7f",
+      "path": "catalog/com.tapulous.taptaptour/controller-com-tapulous-taptaptour-d22d6a7f.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-thegamecreators-touchandgo-cc02971f",
+      "path": "catalog/com.thegamecreators.TouchAndGo/controller-com-thegamecreators-touchandgo-cc02971f.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-turner-amateursurgeon-3486de6e",
+      "path": "catalog/com.turner.AmateurSurgeon/controller-com-turner-amateursurgeon-3486de6e.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-com-vgmobile-cnk2-d441aad9",
+      "path": "catalog/com.vgmobile.cnk2/controller-com-vgmobile-cnk2-d441aad9.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-com-wavemachine-voiceband-bfb6d020",
+      "path": "catalog/com.wavemachine.voiceband/controller-com-wavemachine-voiceband-bfb6d020.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-hu-redshift-the-quest-hd-ec0589ed",
+      "path": "catalog/hu.redshift.The-Quest-HD/controller-hu-redshift-the-quest-hd-ec0589ed.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-jp-co-capcom-residentevil-en-9e451d0b",
+      "path": "catalog/jp.co.capcom.residentevil.en/controller-jp-co-capcom-residentevil-en-9e451d0b.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "controller-pl-idreams-canknockdown3-d85bbf6d",
+      "path": "catalog/pl.idreams.CanKnockdown3/controller-pl-idreams-canknockdown3-d85bbf6d.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-uk-co-squareheadstudios-stardrift-f8e26347",
+      "path": "catalog/uk.co.squareheadstudios.stardrift/controller-uk-co-squareheadstudios-stardrift-f8e26347.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-www-fishlabs-net-gof2hd-03dfc6e7",
+      "path": "catalog/www.fishlabs.net.gof2hd/controller-www-fishlabs-net-gof2hd-03dfc6e7.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-www-fishlabs-net-gof2hd-74ece5be",
+      "path": "catalog/www.fishlabs.net.gof2hd/controller-www-fishlabs-net-gof2hd-74ece5be.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "controller-www-fishlabs-net-sbh-08351e14",
+      "path": "catalog/www.fishlabs.net.sbh/controller-www-fishlabs-net-sbh-08351e14.sdpatch.json",
+      "kind": "input",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "snowboard-hero-direct-eagl-present",
+      "path": "catalog/www.fishlabs.net.sbh/snowboard-hero-direct-eagl-present.sdpatch.json",
       "kind": "compatibility",
       "status": "experimental",
       "defaultEnabled": true

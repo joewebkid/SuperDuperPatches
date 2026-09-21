@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-madfingergames-samurai-8bf065ea",
+  "name": "Геймпад · курсор, нажатие и drag — Samurai",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.madfingergames.Samurai",
+    "bundleVersions": [
+      "1.5"
+    ],
+    "executableSha256": [
+      "8bf065ea682aa3b85a031580960f43f1cad8f5376081ae242e77ae288e927d2a"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

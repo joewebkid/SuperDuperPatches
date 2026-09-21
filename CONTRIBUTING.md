@@ -10,8 +10,9 @@
      apps, implement and test a general engine rule;
    - if the application intentionally depends on one old device/layout quirk,
      submit a declarative patch.
-4. Copy `templates/compatibility.sdpatch.json` and give it a stable lowercase
-   ID. Never reuse an ID for unrelated behaviour.
+4. Copy `templates/compatibility.sdpatch.json` for a presentation fix or
+   `templates/input.sdpatch.json` for a controller layout, then give it a
+   stable lowercase ID. Never reuse an ID for unrelated behaviour.
 5. Choose `defaultEnabled` deliberately. New experimental patches should
    normally default to `false` until their rollback has been tested; enabling
    them manually still cannot bypass target identity checks.

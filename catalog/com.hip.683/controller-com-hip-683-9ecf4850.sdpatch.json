@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-hip-683-9ecf4850",
+  "name": "Геймпад · курсор, нажатие и drag — Rock Band",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.hip.683",
+    "bundleVersions": [
+      "1.3.55"
+    ],
+    "executableSha256": [
+      "9ecf48506c79302cefd39b9fb43ef788e58034258093536570e6b39d9717766e"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

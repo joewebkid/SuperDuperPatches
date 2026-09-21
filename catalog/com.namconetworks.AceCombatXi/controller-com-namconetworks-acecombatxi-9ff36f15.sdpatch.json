@@ -1,0 +1,62 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-namconetworks-acecombatxi-9ff36f15",
+  "name": "Геймпад · игровая раскладка — ACE-Xi",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.namconetworks.AceCombatXi",
+    "bundleVersions": [
+      "1.1.3"
+    ],
+    "executableSha256": [
+      "9ff36f1525925cd886490f6b0a1acaed4a510038e823e94b5f22d31d41f03873"
+    ]
+  },
+  "actions": {
+    "input": {
+      "yTiltOffset": 45,
+      "buttons": [
+        {
+          "button": "Start",
+          "x": 195,
+          "y": 310
+        },
+        {
+          "button": "LeftShoulder",
+          "x": 33,
+          "y": 263
+        },
+        {
+          "button": "X",
+          "x": 115,
+          "y": 295
+        },
+        {
+          "button": "Y",
+          "x": 355,
+          "y": 230
+        },
+        {
+          "button": "B",
+          "x": 440,
+          "y": 260
+        },
+        {
+          "button": "A",
+          "x": 355,
+          "y": 300
+        }
+      ],
+      "dpadToTouch": {
+        "x": 15,
+        "y": 150,
+        "width": 75,
+        "height": 75
+      }
+    }
+  }
+}

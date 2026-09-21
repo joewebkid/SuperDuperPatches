@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-ea-mysterymania-inc-bbabe612",
+  "name": "Геймпад · курсор, нажатие и drag — MysteryMania",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.mysterymania.inc",
+    "bundleVersions": [
+      "1.1.0 iPhoneCake.com"
+    ],
+    "executableSha256": [
+      "bbabe6127eb29fe32a607937e1613c68925a7b3ffdea2bcc4ea7114f8eb59af7"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -32,7 +32,9 @@ jobs:
         run: |
           pip install check-jsonschema==0.31.3
           find catalog -name '*.sdpatch.json' -print0 | xargs -0 check-jsonschema --schemafile schema/sdpatch-v1.schema.json
+          check-jsonschema --schemafile schema/sdmod-v1.schema.json templates/resource.sdmod.json
           python scripts/validate_catalog.py
+          python -m unittest discover -s scripts -p 'test_*.py'
       - name: Commit the isolated catalog change
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}

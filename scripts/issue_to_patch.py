@@ -9,6 +9,8 @@ import os
 import re
 from pathlib import Path
 
+from validate_catalog import validate_input_actions
+
 
 ROOT = Path(__file__).resolve().parents[1]
 CATALOG = ROOT / "catalog"
@@ -18,8 +20,6 @@ END = "<!-- sdpatch-json:end -->"
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9.-]{0,95}$")
 BUNDLE_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,199}$")
 SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
-
-
 def extract_manifest(body: str) -> dict[str, object]:
     if body.count(START) != 1 or body.count(END) != 1:
         raise ValueError("issue must contain exactly one sdpatch JSON block")
@@ -57,8 +57,31 @@ def validate_submission(manifest: dict[str, object]) -> tuple[str, str]:
         raise ValueError("community submissions must start as experimental")
     if manifest.get("defaultEnabled") is not False:
         raise ValueError("community submissions must default to disabled")
-    if manifest.get("kind") != "compatibility":
-        raise ValueError("the v1 community flow currently accepts compatibility patches only")
+    kind = manifest.get("kind")
+    if kind not in {"compatibility", "presentation-layout", "input"}:
+        raise ValueError("the v1 community flow accepts typed compatibility, presentation and input patches only")
+
+    allowed_top_level = required | {
+        "$schema",
+        "priority",
+        "dependsOn",
+        "conflictsWith",
+    }
+    if set(manifest) - allowed_top_level:
+        raise ValueError("patch manifest contains unknown fields")
+    for relation_name in ("dependsOn", "conflictsWith"):
+        relations = manifest.get(relation_name, [])
+        if (
+            not isinstance(relations, list)
+            or len(relations) > 16
+            or not all(isinstance(value, str) and ID_RE.fullmatch(value) for value in relations)
+            or len(relations) != len(set(relations))
+        ):
+            raise ValueError(f"invalid {relation_name}")
+        if patch_id in relations:
+            raise ValueError("a patch cannot reference itself")
+    if set(manifest.get("dependsOn", [])) & set(manifest.get("conflictsWith", [])):
+        raise ValueError("one patch cannot be both dependency and conflict")
 
     target = manifest.get("target")
     if not isinstance(target, dict):
@@ -84,13 +107,87 @@ def validate_submission(manifest: dict[str, object]) -> tuple[str, str]:
         raise ValueError("community patches cannot use allowLegacyWeakMatch")
 
     actions = manifest.get("actions")
-    if not isinstance(actions, dict) or set(actions) != {"presentation"}:
-        raise ValueError("v1 submissions may contain only typed presentation actions")
-    presentation = actions.get("presentation")
-    if not isinstance(presentation, dict) or set(presentation) != {"presentFlipX"}:
-        raise ValueError("v1 submissions currently support only presentation.presentFlipX")
-    if not isinstance(presentation.get("presentFlipX"), bool):
-        raise ValueError("presentation.presentFlipX must be a boolean")
+    if kind == "compatibility":
+        if not isinstance(actions, dict) or not actions or not set(actions) <= {
+            "presentation",
+            "eagl",
+            "gles",
+        }:
+            raise ValueError("compatibility submissions may contain only presentation/EAGL/GLES actions")
+        presentation = actions.get("presentation", {})
+        if not isinstance(presentation, dict) or not set(presentation) <= {
+            "presentFlipX",
+            "presentRotate180",
+            "correctLandscapeAutorotationLayout",
+            "disablePresentRotation",
+            "disableTouchRotation",
+            "startupDeviceOrientation",
+        }:
+            raise ValueError("unsupported compatibility presentation action")
+        bool_presentation = set(presentation) - {"startupDeviceOrientation"}
+        if not all(isinstance(presentation[name], bool) for name in bool_presentation):
+            raise ValueError("compatibility presentation switches must be boolean")
+        if presentation.get("startupDeviceOrientation") not in {
+            None,
+            "portrait",
+            "portrait-upside-down",
+            "landscape-left",
+            "landscape-right",
+        }:
+            raise ValueError("invalid startupDeviceOrientation")
+        for namespace, supported in {
+            "eagl": {
+                "recoverSharedRenderbufferStorage",
+                "forceLandscapeRenderbuffer",
+                "forceDirectPresent",
+            },
+            "gles": {"disableInactiveVertexAttributes", "forceLandscapeViewport"},
+        }.items():
+            values = actions.get(namespace)
+            if values is None:
+                continue
+            if (
+                not isinstance(values, dict)
+                or not values
+                or not set(values) <= supported
+                or not all(isinstance(value, bool) for value in values.values())
+            ):
+                raise ValueError(f"unsupported {namespace} action")
+        if not any(isinstance(value, dict) and value for value in actions.values()):
+            raise ValueError("compatibility actions cannot be empty")
+    elif kind == "presentation-layout":
+        if not isinstance(actions, dict) or set(actions) != {"presentation"}:
+            raise ValueError("presentation-layout may contain only presentation actions")
+        presentation = actions.get("presentation")
+        if (
+            not isinstance(presentation, dict)
+            or not presentation
+            or not set(presentation)
+            <= {"outputFit", "virtualScreen", "forceVirtualScreenViewBounds"}
+            or ("outputFit" in presentation and presentation["outputFit"] not in {"aspect-fit", "stretch"})
+            or ("virtualScreen" in presentation and presentation["virtualScreen"] != "host-aspect")
+            or (
+                "forceVirtualScreenViewBounds" in presentation
+                and not isinstance(presentation["forceVirtualScreenViewBounds"], bool)
+            )
+            or (
+                "forceVirtualScreenViewBounds" in presentation
+                and presentation.get("virtualScreen") != "host-aspect"
+            )
+        ):
+            raise ValueError(
+                "presentation-layout requires supported outputFit/virtualScreen/"
+                "forceVirtualScreenViewBounds actions"
+            )
+    else:
+        if not isinstance(actions, dict) or set(actions) != {"input"}:
+            raise ValueError("input submissions may contain only typed input actions")
+        # Reuse the exact semantic validator used by catalog CI so an issue
+        # cannot pass the gateway workflow and then fail after materializing.
+        validate_input_actions(
+            ROOT / "community-submission.sdpatch.json",
+            actions.get("input"),
+        )
     return patch_id, bundle_id
 
 

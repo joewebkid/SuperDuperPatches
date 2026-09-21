@@ -1,0 +1,69 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-eamobile-wolfbv-83a719cd",
+  "name": "Геймпад · игровая раскладка — Wolf...RPG",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.eamobile.wolfbv",
+    "bundleVersions": [
+      "1.1.1"
+    ],
+    "executableSha256": [
+      "83a719cd4779aa2a17946ba94822a4c03b992c417da5d12204702dc0d93fbff0"
+    ]
+  },
+  "actions": {
+    "input": {
+      "stabilizeVirtualCursor": {
+        "smoothingStrength": 0.1,
+        "stickyRadius": 10
+      },
+      "buttons": [
+        {
+          "button": "A",
+          "x": 240,
+          "y": 160
+        },
+        {
+          "button": "B",
+          "x": 240,
+          "y": 280
+        },
+        {
+          "button": "X",
+          "x": 26,
+          "y": 280
+        },
+        {
+          "button": "Y",
+          "x": 454,
+          "y": 280
+        },
+        {
+          "button": "DPadLeft",
+          "x": 34,
+          "y": 178
+        },
+        {
+          "button": "DPadUp",
+          "x": 76,
+          "y": 140
+        },
+        {
+          "button": "DPadRight",
+          "x": 116,
+          "y": 180
+        },
+        {
+          "button": "DPadDown",
+          "x": 76,
+          "y": 220
+        }
+      ]
+    }
+  }
+}

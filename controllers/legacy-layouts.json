@@ -1,0 +1,43 @@
+{
+  "com.namconetworks.AceCombatXi": {
+    "yTiltOffset": 45,
+    "buttons": [
+      {"button":"Start","x":195,"y":310},
+      {"button":"LeftShoulder","x":33,"y":263},
+      {"button":"X","x":115,"y":295},
+      {"button":"Y","x":355,"y":230},
+      {"button":"B","x":440,"y":260},
+      {"button":"A","x":355,"y":300}
+    ],
+    "dpadToTouch":{"x":15,"y":150,"width":75,"height":75}
+  },
+  "com.ooi.supermonkeyball": {
+    "yTiltOffset":24,
+    "buttons":[{"button":"B","x":470,"y":160},{"button":"Start","x":240,"y":10}]
+  },
+  "com.vgmobile.cnk2": {
+    "buttons":[
+      {"button":"A","x":240,"y":160}, {"button":"B","x":240,"y":310},
+      {"button":"Start","x":10,"y":310}, {"button":"Y","x":470,"y":310},
+      {"button":"X","x":446,"y":30}
+    ]
+  },
+  "jp.co.capcom.residentevil.en": {
+    "stabilizeVirtualCursor":{"smoothingStrength":0.1,"stickyRadius":10},
+    "buttons":[
+      {"button":"A","x":430,"y":280}, {"button":"B","x":440,"y":200},
+      {"button":"Y","x":440,"y":100}, {"button":"Start","x":30,"y":30}
+    ],
+    "dpadToTouch":{"x":25,"y":200,"width":95,"height":100},
+    "leftStickToTouch":{"x":25,"y":200,"width":95,"height":100}
+  },
+  "com.eamobile.wolfbv": {
+    "stabilizeVirtualCursor":{"smoothingStrength":0.1,"stickyRadius":10},
+    "buttons":[
+      {"button":"A","x":240,"y":160}, {"button":"B","x":240,"y":280},
+      {"button":"X","x":26,"y":280}, {"button":"Y","x":454,"y":280},
+      {"button":"DPadLeft","x":34,"y":178}, {"button":"DPadUp","x":76,"y":140},
+      {"button":"DPadRight","x":116,"y":180}, {"button":"DPadDown","x":76,"y":220}
+    ]
+  }
+}

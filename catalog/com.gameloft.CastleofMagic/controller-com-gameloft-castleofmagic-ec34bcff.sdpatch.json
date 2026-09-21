@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-castleofmagic-ec34bcff",
+  "name": "Геймпад · курсор, нажатие и drag — Castle of Magic",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.CastleofMagic",
+    "bundleVersions": [
+      "1.0.4"
+    ],
+    "executableSha256": [
+      "ec34bcffb79aee03e62d40f93d54b314a4801c5d64930b67324ad25a7940de7c"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

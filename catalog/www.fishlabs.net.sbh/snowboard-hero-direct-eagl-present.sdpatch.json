@@ -1,0 +1,27 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "snowboard-hero-direct-eagl-present",
+  "name": "Snowboard Hero — Direct EAGL presentation",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "www.fishlabs.net.sbh",
+    "bundleVersions": ["1.6"],
+    "executableSha256": [
+      "08351e14ee38fec9946efc2cd06a4010cce013a6c8cc95e99ca19b8380f7d154"
+    ]
+  },
+  "actions": {
+    "presentation": {
+      "startupDeviceOrientation": "landscape-left",
+      "disablePresentRotation": true,
+      "disableTouchRotation": false
+    },
+    "eagl": {
+      "forceDirectPresent": true
+    }
+  }
+}

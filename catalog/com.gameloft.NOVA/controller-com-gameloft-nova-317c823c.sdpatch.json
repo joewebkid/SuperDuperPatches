@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-nova-317c823c",
+  "name": "Геймпад · курсор, нажатие и drag — NOVA",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.NOVA",
+    "bundleVersions": [
+      "1.1.0"
+    ],
+    "executableSha256": [
+      "317c823c3d42fad2b0314f9a7e86b8906b5f68f8deeb6a26774a841c51d08447"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

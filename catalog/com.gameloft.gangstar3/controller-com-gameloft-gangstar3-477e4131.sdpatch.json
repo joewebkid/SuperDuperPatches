@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-gangstar3-477e4131",
+  "name": "Геймпад · курсор, нажатие и drag — gangstar3",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.gangstar3",
+    "bundleVersions": [
+      "1.4.11"
+    ],
+    "executableSha256": [
+      "477e4131795ee22ab848153921eb05a89aae87dc325200a96da148afe73e75eb"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

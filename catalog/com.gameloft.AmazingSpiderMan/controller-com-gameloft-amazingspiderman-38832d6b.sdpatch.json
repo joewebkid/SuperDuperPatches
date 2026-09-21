@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-amazingspiderman-38832d6b",
+  "name": "Геймпад · курсор, нажатие и drag — AmazingSpiderMan",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.AmazingSpiderMan",
+    "bundleVersions": [
+      "1.0.3"
+    ],
+    "executableSha256": [
+      "38832d6b998ca9ffa9f76fab9e1f312ea58316ed45e6aa380da0b5856044ce4f"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

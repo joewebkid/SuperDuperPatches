@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-chillingo-orions-c5f88dd5",
+  "name": "Геймпад · курсор, нажатие и drag — Orions",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.chillingo.Orions",
+    "bundleVersions": [
+      "1.1"
+    ],
+    "executableSha256": [
+      "c5f88dd5160b1404b4f0c01f0bb2b7ba244f8bd83bdad7d2178112aed0bde76d"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-gameloft-zombieinfection-3b90a5b5",
+  "name": "Геймпад · курсор, нажатие и drag — ZombieInfection",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.gameloft.ZombieInfection",
+    "bundleVersions": [
+      "1.0.0"
+    ],
+    "executableSha256": [
+      "3b90a5b51c89a12c56b267967e61083d9a03b9b06f2617ef5a8b2e32a9a2c7d8"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "controller-com-tapulous-metallica-ef3595e5",
+  "name": "Геймпад · курсор, нажатие и drag — Metallica",
+  "kind": "input",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.tapulous.metallica",
+    "bundleVersions": [
+      "1.0 iPhoneCake.com"
+    ],
+    "executableSha256": [
+      "ef3595e53bd8cd2aaf477e42a6f6629c87c4198059a4e6bcf0a2ff6c257c547c"
+    ]
+  },
+  "actions": {
+    "input": {
+      "cursorMode": "relative",
+      "cursorClickButton": "A"
+    }
+  }
+}

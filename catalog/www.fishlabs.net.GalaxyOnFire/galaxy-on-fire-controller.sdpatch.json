@@ -1,0 +1,32 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "galaxy-on-fire-controller",
+  "name": "Galaxy on Fire gamepad controls",
+  "kind": "input",
+  "status": "verified",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": {
+    "bundleId": "www.fishlabs.net.GalaxyOnFire",
+    "bundleVersions": ["1.1.5"],
+    "executableSha256": ["be45cd232b742ed1a14d99e00b07b5772147fe0b7b1ad6c21fe22c863d4e0cb5"],
+    "allowLegacyWeakMatch": false
+  },
+  "actions": {
+    "input": {
+      "leftDeadzone": 0.1,
+      "rightDeadzone": 0.1,
+      "accelerometerMode": "gamepad",
+      "tiltStick": "left",
+      "cursorStick": "right",
+      "buttons": [
+        { "button": "A", "x": 427, "y": 274 },
+        { "button": "X", "x": 380, "y": 254 },
+        { "button": "Y", "x": 124, "y": 291 },
+        { "button": "B", "x": 444, "y": 221 },
+        { "button": "Start", "x": 444, "y": 20 }
+      ]
+    }
+  }
+}
