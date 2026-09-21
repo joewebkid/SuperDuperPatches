@@ -8,9 +8,10 @@ require an explicit per-game opt-in. Automatic trust and binary overlays still
 require the signed-catalog design in `docs/TRUSTED_CATALOG.md`.
 
 This is the source tree for the standalone `SuperDuperPatches` catalog. It
-contains declarative compatibility metadata only. The emulator
-embeds the verified built-in subset at compile time; a later release may fetch
-a signed index without allowing downloaded native code to execute.
+contains declarative compatibility metadata only. The emulator embeds a
+built-in subset and can stage separately downloaded exact-revision JSON
+manifests. Downloaded new IDs remain off until enabled in a game profile;
+signed automatic trust is a later milestone.
 
 ## Package classes
 
@@ -19,6 +20,7 @@ a signed index without allowing downloaded native code to execute.
 | `compatibility` | Selects typed EAGL, UIKit, GL and audio policies | No |
 | `presentation-layout` | Aspect, widescreen and HUD layout policies | No |
 | `input` | Gamepad-to-touch, swipe, pinch and tilt layouts | No |
+| `achievement` | Exact-game achievement set and icon catalog | No |
 | `resource-mod` | Backward-compatible `.sdmod` v1 resource replacement | No |
 | `overlay-mod` | Ordered `.sdmod` v2 replace/VCDIFF overlay | No |
 | `binary` | Catalog metadata for a typed binary policy; bytes live only in verified `.sdmod` v2 VCDIFF | No |
