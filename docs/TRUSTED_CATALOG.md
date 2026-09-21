@@ -1,7 +1,12 @@
 # Signed patch catalog plan
 
 Remote patch discovery must not become a remote-code or downgrade channel.
-Automatic downloads remain disabled until this TUF-style path is implemented.
+Automatic activation remains disabled until this TUF-style path is implemented.
+The Android importer may stage hash-checked, exact-revision, typed JSON
+manifests from GitHub Pages. Staged patches default to **off** regardless of
+their published `defaultEnabled` value and require per-game opt-in. A SHA-256
+in the same unsigned index checks download integrity, not publisher identity
+or rollback. Binary/resource packages are not remotely activated.
 
 ## Roles
 
@@ -34,6 +39,6 @@ the app.
 
 The current code packages schemas, validates local archives, verifies exact
 preimages/results and records package hashes in the working-cache manifest. It
-does not yet fetch a remote catalog, sign metadata, rotate keys or enable an
-unsigned package automatically. Those features must land together with expiry,
-rollback and last-known-good tests.
+does not yet sign metadata, rotate keys, enforce expiry/rollback or enable an
+unsigned package automatically. Those features must land together with
+last-known-good tests.

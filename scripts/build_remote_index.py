@@ -11,7 +11,9 @@ for entry in index["patches"]:
     path = entry["path"]
     if not path.startswith("catalog/") or ".." in Path(path).parts or not path.endswith(".sdpatch.json"):
         raise ValueError(f"unsafe catalog path: {path}")
-    data = (root / path).read_bytes()
+    # GitHub Pages serves committed Git blobs. On Windows a checkout may use
+    # CRLF even though Git normalizes JSON to LF during commit.
+    data = (root / path).read_bytes().replace(b"\r\n", b"\n")
     manifest = json.loads(data)
     target = manifest["target"]
     if manifest["id"] != entry["id"]:

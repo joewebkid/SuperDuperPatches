@@ -12,8 +12,8 @@
       "executableSha256": [
         "00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13"
       ],
-      "bytes": 659,
-      "sha256": "d528d9df2bb8718fb2bc5ba95e5c10e505a34d0fda73f76841bb8c0a9f0ff10b"
+      "bytes": 634,
+      "sha256": "ddf53ef1907bd9da4d7cfc4319494963a5acb00655502a5db82e3b09628169c3"
     },
     {
       "id": "controller-com-bigbluebubble-elvenchronicles-08241911",
@@ -26,8 +26,8 @@
       "executableSha256": [
         "08241911f191c11956d868bc114f0fadba3de9db827ca5810fe0f6d0b113dbec"
       ],
-      "bytes": 672,
-      "sha256": "5c8f7e7c0ccd232b533d0d1452417a16000ff9ab0308fdc22e6a0ddf243b0fd4"
+      "bytes": 647,
+      "sha256": "39987fcc1334c8081a0e489edbb997279e9d57b40ddc434d89066f0554221f54"
     },
     {
       "id": "controller-com-chairentertainment-birthright-450a2b34",
@@ -40,8 +40,8 @@
       "executableSha256": [
         "450a2b34920d32e7afee188278f9e177541a2b6d9c62305a895c2db635b05b41"
       ],
-      "bytes": 676,
-      "sha256": "d8c859b4cef9fb3b2004650032225acf0d82f3cc9d31bfe94b2aa9f903d58640"
+      "bytes": 651,
+      "sha256": "140c0deb05b1aaea1eb2e14a7c198f75101d91da1dc57fb9b553b8bfd9cae1ab"
     },
     {
       "id": "controller-com-chillingo-orions-c5f88dd5",
@@ -54,8 +54,8 @@
       "executableSha256": [
         "c5f88dd5160b1404b4f0c01f0bb2b7ba244f8bd83bdad7d2178112aed0bde76d"
       ],
-      "bytes": 637,
-      "sha256": "2a326be4692c6d2c69d4d21e1af8963697e103e524ef7a523c8d90145072ad36"
+      "bytes": 612,
+      "sha256": "948663286103594694e4d92acca6d311a98abf6b134ff0f5060eafbc46976f9e"
     },
     {
       "id": "controller-com-com2us-feanor2-c057c2b2",
@@ -68,8 +68,8 @@
       "executableSha256": [
         "c057c2b233e0a5fa7ecd094d4f01222d7b099b3aabb764fe205b0933426da9f9"
       ],
-      "bytes": 637,
-      "sha256": "69604e86a7efd5458eb3bd7b6b47ac366b9dcf5747e73139f30ea5864f1a3668"
+      "bytes": 612,
+      "sha256": "55dc575fae87e964eda303517722d3e95ab40747478c78382831959f471832e6"
     },
     {
       "id": "controller-com-com2us-inotia-7685df07",
@@ -82,8 +82,8 @@
       "executableSha256": [
         "7685df0750e07fed8d37db79ce133f8ef69475515a67a15cc3fd96969221f652"
       ],
-      "bytes": 634,
-      "sha256": "234472c311c770b07332eec66a1fc583757c4ebe433c0e051b6582a012c086d7"
+      "bytes": 609,
+      "sha256": "35334ca30c228e4c955c4e27efbebce299b1186edee94a8abfe73af6920a167b"
     },
     {
       "id": "controller-com-com2us-inotia3-ca215102",
@@ -96,8 +96,8 @@
       "executableSha256": [
         "ca2151027289bbaf4997924ce5dc54333314a9b3b4f06959ffcb2bf12f68c87b"
       ],
-      "bytes": 638,
-      "sha256": "aed2c27904ef2b5fce83191d60644b87daabd45f9466a24a3fe99525753a8d95"
+      "bytes": 613,
+      "sha256": "d04c8cd86ed886891f97e1e9814567f91510f09b1cc722a022fb9481d7223aeb"
     },
     {
       "id": "controller-com-donutgames-trafficrush-e25d7647",
@@ -110,8 +110,8 @@
       "executableSha256": [
         "e25d7647863abe59d920d49232d521bfd54a83423edfe24f769d973b4a75aab3"
       ],
-      "bytes": 656,
-      "sha256": "6f10741c0cd28eff961cdcccde25c5ee066f4e4528dd949c7a4157d7da61e8f4"
+      "bytes": 631,
+      "sha256": "d823537e51a6c6ebc4a15f0bb67f44fba53f11e632a7498a27d2203b30ce2b1d"
     },
     {
       "id": "controller-com-ea-candcra-row-44d5d049",
@@ -124,8 +124,8 @@
       "executableSha256": [
         "44d5d049a7524662418083f5c545576ea050ff4149c6aeac4b1406f80109d88f"
       ],
-      "bytes": 638,
-      "sha256": "c9d80bc022e3a1b975b2f73de5fff21bcbd8e2a393d7477272f9d99a3adf9ead"
+      "bytes": 613,
+      "sha256": "95cb5ce39796c93fe9731a07538ca259a453e3a0fff43790d5d46f4f49734f2d"
     },
     {
       "id": "controller-com-ea-mysterymania-inc-bbabe612",
@@ -138,8 +138,8 @@
       "executableSha256": [
         "bbabe6127eb29fe32a607937e1613c68925a7b3ffdea2bcc4ea7114f8eb59af7"
       ],
-      "bytes": 666,
-      "sha256": "05e574b7bfd717aee05a079747c13747815233ac8a0d3877488d531260c0dfc7"
+      "bytes": 641,
+      "sha256": "b2cd1b88d1dd6492d8d3c4835aaf58c3a02e4432bfc55029601d465fef7f27cb"
     },
     {
       "id": "controller-com-ea-nfshp-ipad-inc-37523440",
@@ -152,8 +152,8 @@
       "executableSha256": [
         "37523440b6401d7119706b723bc9d6cfc9743a1b7770059abcb351c8b2e3a629"
       ],
-      "bytes": 647,
-      "sha256": "1ca67a3fb733cdd4e1158cf81bae4e609996dd566dfa78e749d46ea023f2bb6c"
+      "bytes": 622,
+      "sha256": "8c31438818e9b6e031620166edcda330817191f51b8253e9fc4e96646d7012ad"
     },
     {
       "id": "controller-com-ea-sims3inc-b5c2dd38",
@@ -166,8 +166,8 @@
       "executableSha256": [
         "b5c2dd38ccd00f8b8677c8ddf68d0064c0d77160e587485ef286e6257faba253"
       ],
-      "bytes": 634,
-      "sha256": "77d7cd750f3b09b4eb5b3872af97743e4a16d6848f7e782844bb8d39aeeb5be0"
+      "bytes": 609,
+      "sha256": "2dbded1adeba650309f9c21f4238951dfe3f8c794d19faf12fbc5814a8a44206"
     },
     {
       "id": "controller-com-ea-simsmedieval-bv-fdeab8dd",
@@ -180,8 +180,8 @@
       "executableSha256": [
         "fdeab8dd92d566b74b21d4c3c2fd03a5b2e579a3a81e0f02bde42352b0aa7dc3"
       ],
-      "bytes": 645,
-      "sha256": "20cc55de20d96bd182e3950b4f7cd7078ae265d6ecd65dc805170784bc1560ae"
+      "bytes": 620,
+      "sha256": "ac11e3dc387b8b2f829798df395bfdca6951773c25a381ab2ca5414535ff525b"
     },
     {
       "id": "controller-com-eamobile-wolfbv-83a719cd",
@@ -194,8 +194,8 @@
       "executableSha256": [
         "83a719cd4779aa2a17946ba94822a4c03b992c417da5d12204702dc0d93fbff0"
       ],
-      "bytes": 1451,
-      "sha256": "f04674caa3e76015a83a451cc4ed78810fe60fb7579cb56a96b67112a29f86cb"
+      "bytes": 1382,
+      "sha256": "d3867e132188dd447ccbe3836b9aec6c0c88355b2f2138c9ef49422f12725b68"
     },
     {
       "id": "controller-com-escalationstudios-resurrectiondoom-131b9449",
@@ -208,8 +208,8 @@
       "executableSha256": [
         "131b9449af2dbf804330c23093c26ae87464c6b726bc5d1195a644760b88a43b"
       ],
-      "bytes": 1528,
-      "sha256": "0412414a1d993210ed1d92260643f8d3438c2602f4fb204df45a881d65cec922"
+      "bytes": 1464,
+      "sha256": "7d302663f2c3ea2d511850b0c23b42092d31a0e00555975c18901d4cc9889426"
     },
     {
       "id": "controller-com-gameloft-amazingspiderman-38832d6b",
@@ -222,8 +222,8 @@
       "executableSha256": [
         "38832d6b998ca9ffa9f76fab9e1f312ea58316ed45e6aa380da0b5856044ce4f"
       ],
-      "bytes": 667,
-      "sha256": "63824e3796c0312f392c52284494e8e04a61a085468619135562e0fda880247b"
+      "bytes": 642,
+      "sha256": "034abe394c15e2754e60f527cd82e081c6edec5576ad88e29f2562856b97c65e"
     },
     {
       "id": "controller-com-gameloft-bbd2-f3e5ac00",
@@ -236,8 +236,8 @@
       "executableSha256": [
         "f3e5ac001e6be50100cf95c35942a97fc34e5b7936af2b78639e3f58fa268c3b"
       ],
-      "bytes": 631,
-      "sha256": "219ae098b5146456891a2777aa21cff0de07c5d812283c17f36030d331dff24d"
+      "bytes": 606,
+      "sha256": "450e6f445a141a16a0788c823cbbcec2fe1af07ec0766b52d0efa3fbd72060c6"
     },
     {
       "id": "controller-com-gameloft-bbd3-63bb9ca6",
@@ -250,8 +250,8 @@
       "executableSha256": [
         "63bb9ca6b02d4df5be9316142cc1555f8f650527964fc07353b91308ac1b9174"
       ],
-      "bytes": 631,
-      "sha256": "1bf9587077aae81232ee2dd11406837eecd7bad782fc94dcd328cd7e3aa00a51"
+      "bytes": 606,
+      "sha256": "3f147bb56704c44061de459e92eed6c3e6c8910687bdcc099ec28d43146bce92"
     },
     {
       "id": "controller-com-gameloft-castleofmagic-ec34bcff",
@@ -264,8 +264,8 @@
       "executableSha256": [
         "ec34bcffb79aee03e62d40f93d54b314a4801c5d64930b67324ad25a7940de7c"
       ],
-      "bytes": 660,
-      "sha256": "59784cf1c4be4b3f7ef25df61aca3a9a82db745731476b8e1ffb2c1140f837f3"
+      "bytes": 635,
+      "sha256": "516b854f56a1e694268371edad97e02f03be1817de8dbac0bb2f17198e56fb84"
     },
     {
       "id": "controller-com-gameloft-dungeonhunter2ipad-81f61e89",
@@ -278,8 +278,8 @@
       "executableSha256": [
         "81f61e897c79329342888c0dc60ed5905104f87bcda3d0970e183542c295e111"
       ],
-      "bytes": 673,
-      "sha256": "21684b802775422efd55fdfabd228ddc32dcfb31d6234d261f9ba0d5e4df51dc"
+      "bytes": 648,
+      "sha256": "4334f30320ea2b7e67ea8ce2f9888618955e675e761cecb31e62bb8d780fcda6"
     },
     {
       "id": "controller-com-gameloft-dungeonhunteripad-592c4e82",
@@ -292,8 +292,8 @@
       "executableSha256": [
         "592c4e82a21a5348a39626fb393b457406508472ddfc858ca3c3e7c4b507ca34"
       ],
-      "bytes": 660,
-      "sha256": "66d6baa464591c1538f95c4b534eb8687c84487149d368e2e710cb2833a7a5af"
+      "bytes": 635,
+      "sha256": "e3d40b40c4bfbc8b1f62d27d4bd314c86083d7618f90c2bd9ac2653f3eedc348"
     },
     {
       "id": "controller-com-gameloft-gangstar3-477e4131",
@@ -306,8 +306,8 @@
       "executableSha256": [
         "477e4131795ee22ab848153921eb05a89aae87dc325200a96da148afe73e75eb"
       ],
-      "bytes": 647,
-      "sha256": "63d26caab20892175da30c158188f97a986e5774709ed9bd9ca7b41ee099c459"
+      "bytes": 622,
+      "sha256": "2502d200bd2702565c0f5f78fd9ccd1d22be38af6a7ba2c518a617fcdc72c8db"
     },
     {
       "id": "controller-com-gameloft-nova-317c823c",
@@ -320,8 +320,8 @@
       "executableSha256": [
         "317c823c3d42fad2b0314f9a7e86b8906b5f68f8deeb6a26774a841c51d08447"
       ],
-      "bytes": 631,
-      "sha256": "46d6491a9ad6465edeaa67fb9494658e7bd2c09ce0e8cc1e640f6e51f09c54ab"
+      "bytes": 606,
+      "sha256": "84ee36f8222dd9b198917f5f5de0c4b7d95ab5e7debaf9d607670d6f276cc372"
     },
     {
       "id": "controller-com-gameloft-starfrontipad-67a78b70",
@@ -334,8 +334,8 @@
       "executableSha256": [
         "67a78b70ab85c4ad91a3ab46fc73068b0abe7febb7e8eb268388e2c395e2970a"
       ],
-      "bytes": 654,
-      "sha256": "62e09c6c18e82708339360e0c0a906d42d72460721c088df914f09468fe25f2e"
+      "bytes": 629,
+      "sha256": "e726562f97b1731bf4382e2d3ec1b760b613f9a4194c03621f611ad94d78f784"
     },
     {
       "id": "controller-com-gameloft-terminator-f406850b",
@@ -348,8 +348,8 @@
       "executableSha256": [
         "f406850b2fc8cc3dc4b72ebeb8f6ac2e8f60b28d5cc9f2f0e26e0e5d47bed473"
       ],
-      "bytes": 649,
-      "sha256": "315f84473eca62918f3deae4321aa0c27b2b72cc358beca77d388bb89b983c11"
+      "bytes": 624,
+      "sha256": "62f993bda8aec45c368c7003dcadd1302eb6a3bad6873e96394bfea6b72da802"
     },
     {
       "id": "controller-com-gameloft-zombieinfection-3b90a5b5",
@@ -362,8 +362,8 @@
       "executableSha256": [
         "3b90a5b51c89a12c56b267967e61083d9a03b9b06f2617ef5a8b2e32a9a2c7d8"
       ],
-      "bytes": 664,
-      "sha256": "efe8b61eef765a2c41b165d762da6508d74627a5363c1726a0aaa70b5cc2ee15"
+      "bytes": 639,
+      "sha256": "ef4cfc5e34e71d4c7ba775458943a2b7de88dd18e30c49e8bed6a4d2cd055d50"
     },
     {
       "id": "controller-com-go-starwave-scarface-ee95c13a",
@@ -376,8 +376,8 @@
       "executableSha256": [
         "ee95c13a8b85c67657a39d743d6f9da9c4049595ae7429adcd704e26b8424e2c"
       ],
-      "bytes": 647,
-      "sha256": "65688154f500778539a11f5347fc7c7bb19b32da19d382f06b92b0ac9d4bb084"
+      "bytes": 622,
+      "sha256": "01a9b5f2ad8f6688a8e5dcb0d53b7bb516aedccfdace66accee96be464ea507c"
     },
     {
       "id": "controller-com-hip-34110-a6b67975",
@@ -390,8 +390,8 @@
       "executableSha256": [
         "a6b679753dddb7ff07689304c2901c892dae15280ed0db8ac67af7817a3ba13b"
       ],
-      "bytes": 628,
-      "sha256": "c9df45f6422549dd6e48a70ab8aeec30cb3aec372f01ce3680502183ac7cf45b"
+      "bytes": 603,
+      "sha256": "977493a29886557b367b94c41356c7456631e91ad79b70cdebce1dca76b186e1"
     },
     {
       "id": "controller-com-hip-683-9ecf4850",
@@ -404,8 +404,8 @@
       "executableSha256": [
         "9ecf48506c79302cefd39b9fb43ef788e58034258093536570e6b39d9717766e"
       ],
-      "bytes": 625,
-      "sha256": "44951433b498bb661f616fbf97109581c6a9a970a2a9a361f81d366d3b570875"
+      "bytes": 600,
+      "sha256": "36717e6fead9ad83550ab4d5a52da611bb1f81c93f9371cf367766b3d0e7567b"
     },
     {
       "id": "controller-com-idsoftware-wolf3d-deaba9eb",
@@ -418,8 +418,8 @@
       "executableSha256": [
         "deaba9eb8161aa169bed74426455a8a6bc03e54efae9c9f98890d24db44fdef7"
       ],
-      "bytes": 640,
-      "sha256": "5ff9763c5162b157d8b70352c9b6e79a6fce41d80de321c532a510cf6d68a0c1"
+      "bytes": 615,
+      "sha256": "68d3701203677bf7e6959cee3a31361018c247ea76f8b876106e8fe664a549d8"
     },
     {
       "id": "controller-com-madfingergames-samurai-8bf065ea",
@@ -432,8 +432,8 @@
       "executableSha256": [
         "8bf065ea682aa3b85a031580960f43f1cad8f5376081ae242e77ae288e927d2a"
       ],
-      "bytes": 650,
-      "sha256": "90d7a74c55a9e970e41ca490e0fe37d11beedcbe0f6d306a8190c5a14fbbd3f9"
+      "bytes": 625,
+      "sha256": "43cb798e263acd00fc29352ebf1ceecf303f2c2ed8947a0b906aed7689de94b8"
     },
     {
       "id": "controller-com-namconetworks-acecombatxi-9ff36f15",
@@ -446,8 +446,8 @@
       "executableSha256": [
         "9ff36f1525925cd886490f6b0a1acaed4a510038e823e94b5f22d31d41f03873"
       ],
-      "bytes": 1311,
-      "sha256": "660bb31c0d0bfb9f3b48c1746953a20863522fda5daa888af8c095bf361843a3"
+      "bytes": 1249,
+      "sha256": "4ff8e26a989f868564e5c6c78f82542790246f80658811bad640dc74757253f8"
     },
     {
       "id": "controller-com-ooi-supermonkeyball-3ed39f66",
@@ -460,8 +460,8 @@
       "executableSha256": [
         "3ed39f668b63c479d6bcda04f6bba00c9cf35b5c630bc475dca58879391058b2"
       ],
-      "bytes": 817,
-      "sha256": "4b78ef1c2eb943059bea2f2ae95c80c588903e3ffe9a64e6af798610f0c13a60"
+      "bytes": 781,
+      "sha256": "787357660bc4a5c20b9794c99c9733a800afa45bf7614a1e14de234a6ca77a5f"
     },
     {
       "id": "controller-com-sigma-team-alienshootermobile-120d4fea",
@@ -474,8 +474,8 @@
       "executableSha256": [
         "120d4fea2f1d1c18b19bd6db1859c6d77a55f813ad5257563beb0a310df2c101"
       ],
-      "bytes": 670,
-      "sha256": "13d88f62c0fd1e5f437a425a84c2653f482de2b2da5bc571d21f506aec8d9f27"
+      "bytes": 645,
+      "sha256": "f197b2c3c686465ef98705a9712666e20103c5d821813f895db17aaed35abafc"
     },
     {
       "id": "controller-com-snowman-alto-e513478b",
@@ -488,8 +488,8 @@
       "executableSha256": [
         "e513478b1d7458693de84cbe1024e0759f34c849699d4d721a36825e097766c5"
       ],
-      "bytes": 630,
-      "sha256": "bcd0d4b9f87665b292db40068a2095df20037a1e898a36ac2cf24808d3dbaf6e"
+      "bytes": 605,
+      "sha256": "154cd4344f0bdf3a962d32a8e9e84262d160608228637dec5865d6153e0a189c"
     },
     {
       "id": "controller-com-tapulous-coldplay-ce255499",
@@ -502,8 +502,8 @@
       "executableSha256": [
         "ce2554993e8e1aee01044b20b7f8de97849dbfee35d26768d9d567f227f35136"
       ],
-      "bytes": 641,
-      "sha256": "34451d98d3d8148e52599e672aab5ae9c02aa72bc7e6f2598309490f18daf556"
+      "bytes": 616,
+      "sha256": "d84af771d345a549837a07478026cd40e976a16e93bf43cfd32802a8e8f90b4f"
     },
     {
       "id": "controller-com-tapulous-metallica-ef3595e5",
@@ -516,8 +516,8 @@
       "executableSha256": [
         "ef3595e53bd8cd2aaf477e42a6f6629c87c4198059a4e6bcf0a2ff6c257c547c"
       ],
-      "bytes": 659,
-      "sha256": "d9374ef6891d44f0f86f4b33e1b959113bd06da94cb379dc3f1ebdb54ba13d53"
+      "bytes": 634,
+      "sha256": "e0adf385fe52f5e6b26199552ff75ec61b3295b1808ef30ec33be8b65185a198"
     },
     {
       "id": "controller-com-tapulous-nirvana-2b32a35d",
@@ -530,8 +530,8 @@
       "executableSha256": [
         "2b32a35d5ab466e8d6e4e6fe22bbad5d6e4b964cbdd17cf2cbe990ed9d836675"
       ],
-      "bytes": 638,
-      "sha256": "6cb0a3575a1c4383803fcc4932668a3c4ad6be7c4e81b78576d1932684c4d913"
+      "bytes": 613,
+      "sha256": "518fa14fb9399928c0f74d6ecf6042e3e062b89a8f06bd539c8d32ad8c1b9b51"
     },
     {
       "id": "controller-com-tapulous-taptaptour-d22d6a7f",
@@ -544,8 +544,8 @@
       "executableSha256": [
         "d22d6a7f727f8c5f30459f4729e09a3e4987158fc510c1ecde17d24fb9bbde7f"
       ],
-      "bytes": 645,
-      "sha256": "da61e9656dcef90867f5f309cdc01b347f631de48b0fdc8d0bbf663de71ee450"
+      "bytes": 620,
+      "sha256": "a21aa3b7d605e124bdec51e76bf9decd74512c00d65fab208552e6bb142ded3e"
     },
     {
       "id": "controller-com-thegamecreators-touchandgo-cc02971f",
@@ -558,8 +558,8 @@
       "executableSha256": [
         "cc02971f87a6f250af4347f49e8b97bb7f5f74033ba02ef59308d8665e094e84"
       ],
-      "bytes": 661,
-      "sha256": "05aed1ff1c8ad41900179e65faebc95d8afa8580213dde2027d0f7fd311b4edb"
+      "bytes": 636,
+      "sha256": "9ec65cbefb5cc56660fbd91d148ee8f257abb255ca174cb5f10ed3e931818842"
     },
     {
       "id": "controller-com-turner-amateursurgeon-3486de6e",
@@ -572,8 +572,8 @@
       "executableSha256": [
         "3486de6e3dbb2738b0f2a1417974d5f7c2ea059865c427af5f8e003b3541ac0d"
       ],
-      "bytes": 652,
-      "sha256": "c3d83fefe02f9b10e544d7667bb034ddc6b1b68c51e68ac2a33051dbe6c28658"
+      "bytes": 627,
+      "sha256": "c53728da69701cc64a5d65765b7f82d3b1385ace2d19a117972ecb99d9b0a04e"
     },
     {
       "id": "controller-com-vgmobile-cnk2-d441aad9",
@@ -586,8 +586,8 @@
       "executableSha256": [
         "d441aad929068023dfa807ab1e4152a12df2f59e89c39f9b1024c5693b95f87c"
       ],
-      "bytes": 1043,
-      "sha256": "e78ac13f9c99457b68dd0029305b13386b688ca47b63f51124b44bf043f8baec"
+      "bytes": 993,
+      "sha256": "b9065664f95d4432a60d53904e78d27458ac8d29413989fb225e26f26d4e7f42"
     },
     {
       "id": "controller-com-wavemachine-voiceband-bfb6d020",
@@ -600,8 +600,8 @@
       "executableSha256": [
         "bfb6d020d54762e8daf7f701da812a0542d7abfd8694506dc7015608ec6bc22e"
       ],
-      "bytes": 650,
-      "sha256": "763870e5340398658c94d9147218b720dcd7f843a46a6bb18d2265ed1e79ef95"
+      "bytes": 625,
+      "sha256": "f0dd2f9f2cb54206b24171ad7e6ff0a694848ef58fa02467b4654a8031809794"
     },
     {
       "id": "controller-hu-redshift-the-quest-hd-ec0589ed",
@@ -614,8 +614,8 @@
       "executableSha256": [
         "ec0589eda14838d8f15fc68a9df70db8d7ba8e1ed39678880e74dd9c259311d6"
       ],
-      "bytes": 649,
-      "sha256": "01a41dcb6e67813a70c15cdb2ccfeb907cae02b0e34f13af38185b6e0a98bc15"
+      "bytes": 624,
+      "sha256": "c62aae49e4492d0fc3006ad367586d1fe050494a707a349acc3a996a3e20705e"
     },
     {
       "id": "controller-jp-co-capcom-residentevil-en-9e451d0b",
@@ -628,8 +628,8 @@
       "executableSha256": [
         "9e451d0bbdf4aff2e5ad40eabb577e474464ca855dc41375845e4a54f73a5267"
       ],
-      "bytes": 1343,
-      "sha256": "41b551d9a27961491bb1d305a0eba6aa8cba507732354bcdfedfc22bcaac4d43"
+      "bytes": 1282,
+      "sha256": "2b548c13783e560590bedb21d651ede09181c0165baa7e3c517367fe8406b8b1"
     },
     {
       "id": "controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1",
@@ -642,8 +642,8 @@
       "executableSha256": [
         "91cf74a10d63326ca58d77573c0a3405e083ff85ea5d969f4b4ab9e2032fa461"
       ],
-      "bytes": 678,
-      "sha256": "53ce3390c408e46530ad935a4f0add08d3bd9be9cac076a3556e6b9063c4018c"
+      "bytes": 653,
+      "sha256": "d2cbcaae29714c4b69ed8a18ecc2731b1fddfc5c8b06f2e76d9eecea2009a242"
     },
     {
       "id": "controller-pl-idreams-canknockdown3-d85bbf6d",
@@ -656,8 +656,8 @@
       "executableSha256": [
         "d85bbf6d6691a43d36f8eddd1d2aea9a8ba9e5cbf04e10721c71af35f48ae564"
       ],
-      "bytes": 644,
-      "sha256": "1ee815107d402a7aaef3cfc6af94f87fb1cd5f30f7d7b62d6a5d6cf14d7b806c"
+      "bytes": 619,
+      "sha256": "1e53771a1ba3789cd3b740746c70b1c3dc38e9bff37afe4dc68eb1035a200959"
     },
     {
       "id": "controller-uk-co-squareheadstudios-stardrift-f8e26347",
@@ -670,8 +670,8 @@
       "executableSha256": [
         "f8e263474a0867cf4714bd614deb2df58cb472f32d65cb5ddac569ffc50a8dc3"
       ],
-      "bytes": 669,
-      "sha256": "b42f51750c62518700f0861ac77fae84cf4ffd8bd32be029819a7c42be067ae9"
+      "bytes": 644,
+      "sha256": "da5bc633ae6d9f01726c5220c9ee4f4f06bec24c48631bb099809b133241ed9f"
     },
     {
       "id": "controller-www-fishlabs-net-gof2hd-03dfc6e7",
@@ -684,8 +684,8 @@
       "executableSha256": [
         "03dfc6e7045b640d15aa9c27dc69142df61fd3a3a0806efc48f6c0b14eb20ca6"
       ],
-      "bytes": 647,
-      "sha256": "dbe4a9e3733acc7ec515b37a2306e7fb2a6b31d210da7f49ee5e786b45b015fd"
+      "bytes": 622,
+      "sha256": "e8242eea0b4d26c5b8cbbdfda4b4d4f423767b632c246cac3baec7c7fbd5ad8c"
     },
     {
       "id": "controller-www-fishlabs-net-gof2hd-74ece5be",
@@ -698,8 +698,8 @@
       "executableSha256": [
         "74ece5bedf561eed4e71b8d0b875e201c47858a2649a59d65af57390a0554958"
       ],
-      "bytes": 646,
-      "sha256": "7226f2e6466d704ed4b9944b00bcdd94bce9702df7438999c31e2e4e53b59577"
+      "bytes": 621,
+      "sha256": "811c9c3d53894610c736062fd7d54f2f02c3737950c8ae4831dbfa38b506d66b"
     },
     {
       "id": "controller-www-fishlabs-net-sbh-08351e14",
@@ -712,8 +712,8 @@
       "executableSha256": [
         "08351e14ee38fec9946efc2cd06a4010cce013a6c8cc95e99ca19b8380f7d154"
       ],
-      "bytes": 640,
-      "sha256": "b7cc7d56fa58fa28b8a46808625b7a7782d49ae50e66bccdc854537179c22ad9"
+      "bytes": 615,
+      "sha256": "823d1f1ae208e0fe965d04c08f64d8c8992df0c724d4b41aa62c48d660f99760"
     },
     {
       "id": "doom-resurrection-orientation",
