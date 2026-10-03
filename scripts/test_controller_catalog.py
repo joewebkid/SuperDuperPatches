@@ -29,8 +29,14 @@ class ControllerCatalogTests(unittest.TestCase):
         self.assertGreaterEqual(len(games), 48)
         generated = outputs(games)
         for path, content in generated.items():
+            if path == ROOT / "index.json" or not path.is_relative_to(ROOT):
+                continue  # The standalone catalog can gain unrelated patches; the app checkout is optional.
             self.assertEqual(path.read_text(encoding="utf-8"), content, str(path))
-        index = json.loads(generated[ROOT / "index.json"])
+        expected = json.loads(generated[ROOT / "index.json"])
+        index = json.loads((ROOT / "index.json").read_text(encoding="utf-8"))
+        controllers = lambda data: {p["id"]: p for p in data["patches"]
+                                    if p["id"].startswith("controller-")}
+        self.assertEqual(controllers(expected), controllers(index))
         patches = [json.loads((ROOT / entry["path"]).read_text(encoding="utf-8"))
                    for entry in index["patches"] if entry["kind"] == "input"]
         self.assertEqual(len(patches), len(games))
@@ -78,8 +84,11 @@ class ControllerCatalogTests(unittest.TestCase):
 
     def test_legacy_mappings_are_no_longer_hidden_in_default_options(self):
         recipes = json.loads(RECIPES.read_text(encoding="utf-8"))
-        for file in (ROOT.parent / "superduper_default_options.txt",
-                     ROOT.parent / "android/app/src/main/assets/superduper_default_options.txt"):
+        files = (ROOT.parent / "superduper_default_options.txt",
+                 ROOT.parent / "android/app/src/main/assets/superduper_default_options.txt")
+        if not all(file.is_file() for file in files):
+            self.skipTest("Requires the separate emulator checkout")
+        for file in files:
             for line in file.read_text(encoding="utf-8").splitlines():
                 if line.partition(":")[0] in recipes:
                     self.assertNotIn("-to-touch=", line)

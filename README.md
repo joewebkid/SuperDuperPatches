@@ -7,6 +7,10 @@ Downloading a manifest does not enable it: newly fetched unsigned patches
 require an explicit per-game opt-in. Automatic trust and binary overlays still
 require the signed-catalog design in `docs/TRUSTED_CATALOG.md`.
 
+`mods-index.json` is the separate resource-mod discovery endpoint. It stays
+empty until a package with redistribution rights is reviewed. Downloading a
+`.sdmod` requires explicit confirmation and never enables it automatically.
+
 This is the source tree for the standalone `SuperDuperPatches` catalog. It
 contains declarative compatibility metadata only. The emulator embeds a
 built-in subset and can stage separately downloaded exact-revision JSON
