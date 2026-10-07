@@ -44,14 +44,22 @@ schema/sdmod-v2.schema.json
 scripts/validate_catalog.py
 scripts/validate_sdmod.py
 scripts/build_sdmod.py
+scripts/build_mod_index.py
 scripts/make_vcdiff.py
 templates/
 index.json
+mods-index.json
 ```
 
 The canonical format is JSON. JSON Schema makes validation deterministic in
 the app, CI and third-party tools. A visual editor can provide a friendlier UI
 later without introducing a second source format.
+
+For a separately downloadable v2 package, place the validated archive at
+`mods/<bundle-id>/<mod-id>-<version>.sdmod`, then run
+`python scripts/build_mod_index.py`. CI checks that `mods-index.json` matches
+the archive's exact target, byte length and SHA-256. An unsigned package is
+never enabled automatically; publish only payloads you may redistribute.
 
 ## Target safety
 

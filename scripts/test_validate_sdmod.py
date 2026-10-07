@@ -17,6 +17,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from validate_sdmod import validate_archive  # noqa: E402
 from build_sdmod import build_package  # noqa: E402
+from build_mod_index import build_index  # noqa: E402
 
 
 PAYLOAD = b"safe-png-placeholder"
@@ -117,6 +118,36 @@ def overlay_manifest(payload: bytes) -> dict[str, object]:
 
 
 class ResourceModValidationTests(TestCase):
+    def test_remote_index_is_derived_from_exact_validated_package(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            payload = bytes.fromhex("d6c3c40000") + b"test-vcdiff-body"
+            data = overlay_manifest(payload)
+            target = root / "mods" / "com.example.game" / f"{data['id']}-{data['version']}.sdmod"
+            target.parent.mkdir(parents=True)
+            package(target, data, payload)
+
+            entry = build_index(root)["mods"][0]
+
+            self.assertEqual(entry["path"], target.relative_to(root).as_posix())
+            self.assertEqual(entry["sha256"], hashlib.sha256(target.read_bytes()).hexdigest())
+            self.assertEqual(entry["bytes"], target.stat().st_size)
+            self.assertEqual(entry["ipaSha256"], data["target"]["ipaSha256"])
+
+            target.rename(target.with_name("wrong-name.sdmod"))
+            with self.assertRaises(ValueError):
+                build_index(root)
+
+    def test_remote_index_rejects_legacy_package_without_exact_ipa(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            data = manifest()
+            target = root / "mods" / "com.example.game" / f"{data['id']}-{data['version']}.sdmod"
+            target.parent.mkdir(parents=True)
+            package(target, data)
+            with self.assertRaises(ValueError):
+                build_index(root)
+
     def test_accepts_exact_bounded_package(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "example.sdmod"
