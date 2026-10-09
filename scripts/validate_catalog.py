@@ -301,8 +301,8 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
         fail(path, "actions must be a non-empty object")
     kind = manifest.get("kind")
     if kind == "compatibility":
-        if not set(actions) <= {"presentation", "eagl", "gles", "input"}:
-            fail(path, "compatibility patches may contain only presentation/EAGL/GLES/input actions")
+        if not set(actions) <= {"presentation", "eagl", "gles", "audio", "input"}:
+            fail(path, "compatibility patches may contain only presentation/EAGL/GLES/audio/input actions")
         if not actions:
             fail(path, "compatibility patch needs at least one action namespace")
         presentation = actions.get("presentation", {})
@@ -332,6 +332,7 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
                 fail(path, "actions.eagl must be a non-empty object")
             supported_eagl_actions = {
                 "recoverSharedRenderbufferStorage",
+                "allowSoleDrawableMismatch",
                 "forceLandscapeRenderbuffer",
                 "forceDirectPresent",
             }
@@ -343,6 +344,8 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
             gles = actions["gles"]
             supported_gles_actions = {
                 "disableInactiveVertexAttributes",
+                "enableImplicitVertexArray",
+                "ignoreDefaultTextureExtensionValues",
                 "forceLandscapeViewport",
                 "trimUnusedSamplerArrays",
             }
@@ -352,6 +355,14 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
                 fail(path, "actions.gles contains an unsupported action")
         if "input" in actions:
             validate_input_actions(path, actions["input"])
+        if "audio" in actions:
+            audio = actions["audio"]
+            if not isinstance(audio, dict) or not audio or not set(audio) <= {
+                "legacyMp3PcmAudioQueue", "reportWaveFileFormat"
+            } or not all(isinstance(value, bool) for value in audio.values()):
+                fail(path, "actions.audio contains an unsupported action")
+            if not versions or not hashes:
+                fail(path, "actions.audio requires exact version and executable hash")
     elif kind == "input":
         if set(actions) != {"input"}:
             fail(path, "input patches must contain only input actions")

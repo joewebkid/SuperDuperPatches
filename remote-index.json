@@ -828,6 +828,48 @@
       "sha256": "8ad379d7379dc5d414afb255b1d7674a8db412402807c0e51ac4bff03c0d0c02"
     },
     {
+      "id": "mirrors-edge-157-wave-format",
+      "kind": "compatibility",
+      "path": "catalog/com.ea.mirrorsedge.bv/mirrors-edge-157-wave-format.sdpatch.json",
+      "bundleId": "com.ea.mirrorsedge.bv",
+      "bundleVersions": [
+        "1.5.7"
+      ],
+      "executableSha256": [
+        "297d9d9a07df1c44184434e1b5fb1f54be7e258f8c287b15dafe41d7529431a4"
+      ],
+      "bytes": 536,
+      "sha256": "b981b9f81117eff2bde787ee7db17a3201b1554a38ab5c9dbbaa2a10616d6fc1"
+    },
+    {
+      "id": "nova-sole-drawable-present",
+      "kind": "compatibility",
+      "path": "catalog/com.gameloft.NOVA/nova-sole-drawable-present.sdpatch.json",
+      "bundleId": "com.gameloft.NOVA",
+      "bundleVersions": [
+        "1.1.0"
+      ],
+      "executableSha256": [
+        "317c823c3d42fad2b0314f9a7e86b8906b5f68f8deeb6a26774a841c51d08447"
+      ],
+      "bytes": 680,
+      "sha256": "42d46833c6c275ba90adc7d6c726a32aae7079ece97395379ce1b7a6475ba3f5"
+    },
+    {
+      "id": "red-alert-110-audio-queue",
+      "kind": "compatibility",
+      "path": "catalog/com.ea.candcra.row/red-alert-110-audio-queue.sdpatch.json",
+      "bundleId": "com.ea.candcra.row",
+      "bundleVersions": [
+        "1.1.0"
+      ],
+      "executableSha256": [
+        "44d5d049a7524662418083f5c545576ea050ff4149c6aeac4b1406f80109d88f"
+      ],
+      "bytes": 528,
+      "sha256": "bcce60de6baedb827a72784ba3e3e1b2b3ffbfb65d23aac358d6e5e7e601f2a6"
+    },
+    {
       "id": "snowboard-hero-direct-eagl-present",
       "kind": "compatibility",
       "path": "catalog/www.fishlabs.net.sbh/snowboard-hero-direct-eagl-present.sdpatch.json",
