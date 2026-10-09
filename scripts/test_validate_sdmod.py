@@ -15,7 +15,7 @@ from unittest import TestCase
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from validate_sdmod import validate_archive  # noqa: E402
+from validate_sdmod import EMPTY_SHA256, validate_archive, validate_manifest  # noqa: E402
 from build_sdmod import build_package  # noqa: E402
 from build_mod_index import build_index  # noqa: E402
 
@@ -117,15 +117,40 @@ def overlay_manifest(payload: bytes) -> dict[str, object]:
     }
 
 
+def add_manifest(payload: bytes = PAYLOAD, overlay_api: int = 3) -> dict[str, object]:
+    data = overlay_manifest(payload)
+    digest = hashlib.sha256(payload).hexdigest()
+    data["engine"]["overlayApi"] = overlay_api
+    data["budgets"] = {
+        "payloadBytes": len(payload),
+        "maximumOutputBytes": len(payload),
+        "maximumResidentBytes": len(payload),
+    }
+    data["overlays"] = [
+        {
+            "type": "add",
+            "targetClass": "resource",
+            "guestPath": "Textures/12_3_1.aei",
+            "sourceSha256": EMPTY_SHA256,
+            "resultSha256": digest,
+            "payloadPath": f"payload/{digest}.aei",
+            "payloadSha256": digest,
+            "payloadBytes": len(payload),
+            "resultBytes": len(payload),
+            "maximumResidentBytes": len(payload),
+        }
+    ]
+    return data
+
+
 class ResourceModValidationTests(TestCase):
     def test_remote_index_is_derived_from_exact_validated_package(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            payload = bytes.fromhex("d6c3c40000") + b"test-vcdiff-body"
-            data = overlay_manifest(payload)
+            data = add_manifest()
             target = root / "mods" / "com.example.game" / f"{data['id']}-{data['version']}.sdmod"
             target.parent.mkdir(parents=True)
-            package(target, data, payload)
+            package(target, data)
 
             entry = build_index(root)["mods"][0]
 
@@ -147,6 +172,47 @@ class ResourceModValidationTests(TestCase):
             package(target, data)
             with self.assertRaises(ValueError):
                 build_index(root)
+
+    def test_accepts_api3_add_with_empty_source_sentinel(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "add.sdmod"
+            package(path, add_manifest())
+            self.assertEqual(len(validate_archive(path, "0.2.3")), 64)
+
+    def test_add_rejects_api2_bad_sentinel_macho_and_result_hash(self) -> None:
+        invalid = add_manifest(overlay_api=2)
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
+
+        invalid = add_manifest()
+        invalid["overlays"][0]["sourceSha256"] = EMPTY_SHA256.upper()
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
+
+        invalid = add_manifest()
+        invalid["overlays"][0]["targetClass"] = "macho"
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
+
+        invalid = add_manifest()
+        invalid["overlays"][0]["resultSha256"] = "b" * 64
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
+
+    def test_add_rejects_collision_and_traversal(self) -> None:
+        invalid = add_manifest()
+        invalid["overlays"].append(deepcopy(invalid["overlays"][0]))
+        invalid["overlays"][1]["payloadPath"] = "payload/second.aei"
+        invalid["budgets"]["payloadBytes"] *= 2
+        invalid["budgets"]["maximumOutputBytes"] *= 2
+        invalid["budgets"]["maximumResidentBytes"] *= 2
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
+
+        invalid = add_manifest()
+        invalid["overlays"][0]["guestPath"] = "../12_3_1.aei"
+        with self.assertRaises(ValueError):
+            validate_manifest(invalid, "0.2.3")
 
     def test_accepts_exact_bounded_package(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

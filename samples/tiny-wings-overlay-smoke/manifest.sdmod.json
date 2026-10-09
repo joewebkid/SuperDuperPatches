@@ -1,0 +1,47 @@
+{
+  "$schema": "../../schema/sdmod-v2.schema.json",
+  "formatVersion": 2,
+  "id": "com.andreasilliger.tinywings.sd-overlay-smoke",
+  "name": "Проверка внешних модов (без изменения игры)",
+  "version": "0.1.0",
+  "kind": "overlay-mod",
+  "priority": 100,
+  "engine": {
+    "overlayApi": 3,
+    "minimumVersion": "0.2.3"
+  },
+  "target": {
+    "bundleId": "com.andreasilliger.tinywings",
+    "bundleVersions": ["1.1.0"],
+    "ipaSha256": ["fe96bb0b8be295b4031fdee05dadff8f86cf503ee08b6841982cda29a6132499"],
+    "executableSha256": ["00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13"]
+  },
+  "budgets": {
+    "payloadBytes": 228,
+    "maximumOutputBytes": 228,
+    "maximumResidentBytes": 1048576
+  },
+  "license": {
+    "redistributable": true,
+    "name": "MPL-2.0",
+    "spdx": "MPL-2.0",
+    "attribution": "Original Super Duper marker text; no iOS game assets are distributed."
+  },
+  "dependsOn": [],
+  "conflictsWith": [],
+  "overlays": [
+    {
+      "type": "add",
+      "targetClass": "resource",
+      "guestPath": "SuperDuper/overlay-smoke.txt",
+      "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "resultSha256": "266202b762313b26734f43bae439c50f413f776d2bac759f79186b218bf5528d",
+      "payloadPath": "payload/266202b762313b26734f43bae439c50f413f776d2bac759f79186b218bf5528d.txt",
+      "payloadSha256": "266202b762313b26734f43bae439c50f413f776d2bac759f79186b218bf5528d",
+      "payloadBytes": 228,
+      "resultBytes": 228,
+      "maximumResidentBytes": 1048576,
+      "mediaType": "text/plain; charset=utf-8"
+    }
+  ]
+}

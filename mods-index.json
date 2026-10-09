@@ -1,4 +1,23 @@
 {
   "formatVersion": 1,
-  "mods": []
+  "mods": [
+    {
+      "id": "com.andreasilliger.tinywings.sd-overlay-smoke",
+      "name": "Проверка внешних модов (без изменения игры)",
+      "version": "0.1.0",
+      "path": "mods/com.andreasilliger.tinywings/com.andreasilliger.tinywings.sd-overlay-smoke-0.1.0.sdmod",
+      "bundleId": "com.andreasilliger.tinywings",
+      "bundleVersions": [
+        "1.1.0"
+      ],
+      "ipaSha256": [
+        "fe96bb0b8be295b4031fdee05dadff8f86cf503ee08b6841982cda29a6132499"
+      ],
+      "executableSha256": [
+        "00e6229a9a22a8bd87c9d8ececaa365aafb0b66c93d0cff435ff76ce8c38ea13"
+      ],
+      "bytes": 1373,
+      "sha256": "47be643f3c20297b8f54c370b4f25610272eb3a2708532ce8ee5f09a8fe8b2cb"
+    }
+  ]
 }

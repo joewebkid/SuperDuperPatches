@@ -1,0 +1,5 @@
+Super Duper external overlay smoke test
+
+This original file is added to the disposable working bundle for Tiny Wings 1.1.0.
+It does not change the clean IPA, game artwork, gameplay or save data.
+SPDX-License-Identifier: MPL-2.0

@@ -25,7 +25,8 @@ reordering a mod cannot replace a save.
   replacements. It cannot modify Mach-O files.
 - v2 (`schema/sdmod-v2.schema.json`) is the canonical ordered-overlay format.
   It requires the exact IPA SHA-256 as well as bundle version and executable
-  SHA-256, and supports `replace` plus `vcdiff` operations.
+  SHA-256. Overlay API 2 supports `replace` and `vcdiff`; API 3 additionally
+  supports a fail-closed `add` operation. Older APKs reject API 3 packages.
 
 Both schemas use JSON Schema 2020-12. CI runs `check-jsonschema` against every
 template and the standalone validator performs the same semantic and archive
@@ -43,6 +44,11 @@ Two enabled packages may target the same `guestPath` only when the later one
 depends on the earlier one. Its `sourceSha256` must then equal the earlier
 operation's `resultSha256`. This makes the overlay chain explicit instead of
 silently applying two patches to an unknown intermediate file.
+
+`add` may create only a new resource path. Its `sourceSha256` must be the
+SHA-256 of an empty file, and it fails if the path already exists, including
+an existing zero-byte file. It cannot replace a resource, modify Mach-O or
+target `Info.plist`.
 
 Every v2 operation declares a safe bundle-relative `guestPath`; hashes for the
 source, content-addressed payload and result; exact payload/result sizes; and
@@ -89,12 +95,19 @@ ordering, validates the result, and prints its SHA-256. The complete archive
 hash belongs in repository target metadata because a package cannot contain
 its own digest.
 
+The `samples/tiny-wings-overlay-smoke/` source builds the first downloadable
+diagnostic package. It adds only an original text marker to the disposable
+working bundle of one exact Tiny Wings 1.1.0 IPA. It makes no visible game
+change and is disabled until the user enables it. The package proves the
+distribution path, not gameplay compatibility or a graphical mod.
+
 ## Trust and distribution
 
 Local fail-closed validation does not make a download trusted. Until signed
 repository metadata is implemented, remote automatic installation stays
-disabled and packages require explicit import. `TRUSTED_CATALOG.md` defines
-the later TUF roles, rollback protection and last-known-good behavior.
+disabled: a matching catalog package requires an explicit user download (or
+local import) and remains disabled until the user enables it. `TRUSTED_CATALOG.md`
+defines the later TUF roles, rollback protection and last-known-good behavior.
 
 Packages may include only payloads the author may redistribute. Binary deltas
 can still contain copyrighted fragments and require the same licence evidence

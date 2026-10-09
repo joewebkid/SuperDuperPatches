@@ -33,7 +33,7 @@
       "additionalProperties": false,
       "required": ["overlayApi", "minimumVersion"],
       "properties": {
-        "overlayApi": { "const": 2 },
+        "overlayApi": { "enum": [2, 3] },
         "minimumVersion": { "type": "string", "minLength": 1, "maxLength": 64 },
         "maximumVersion": { "type": "string", "minLength": 1, "maxLength": 64 }
       }
@@ -94,6 +94,28 @@
       "items": { "$ref": "#/$defs/overlay" }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "overlays": {
+            "contains": {
+              "type": "object",
+              "required": ["type"],
+              "properties": { "type": { "const": "add" } }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "engine": {
+            "properties": { "overlayApi": { "const": 3 } }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "sha256": {
       "type": "string",
@@ -170,6 +192,28 @@
         }
       ]
     },
+    "addOverlay": {
+      "allOf": [
+        { "$ref": "#/$defs/overlayCommon" },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": { "const": "add" },
+            "targetClass": { "const": "resource" },
+            "guestPath": true,
+            "sourceSha256": { "const": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855" },
+            "resultSha256": true,
+            "payloadPath": true,
+            "payloadSha256": true,
+            "payloadBytes": true,
+            "resultBytes": true,
+            "maximumResidentBytes": true,
+            "mediaType": true
+          }
+        }
+      ]
+    },
     "vcdiffOverlay": {
       "allOf": [
         { "$ref": "#/$defs/overlayCommon" },
@@ -196,6 +240,7 @@
     },
     "overlay": {
       "oneOf": [
+        { "$ref": "#/$defs/addOverlay" },
         { "$ref": "#/$defs/replaceOverlay" },
         { "$ref": "#/$defs/vcdiffOverlay" }
       ]
