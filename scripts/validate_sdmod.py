@@ -20,6 +20,7 @@ MAX_FILES = 4096
 MAX_VCDIFF_BYTES = 256 * 1024 * 1024
 ID_RE = re.compile(r"^[a-z0-9][a-z0-9.-]{0,95}$")
 SHA256_RE = re.compile(r"^[0-9a-fA-F]{64}$")
+EMPTY_SHA256 = "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 SEMVER_RE = re.compile(r"^[0-9]+\.[0-9]+\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$")
 VERSION_RE = re.compile(r"[0-9]+(?:\.[0-9]+)+")
 MACH_O_MAGICS = {
@@ -203,7 +204,11 @@ def validate_manifest_v2(
     require(isinstance(priority, int) and not isinstance(priority, bool) and 0 <= priority <= 1000, "invalid priority")
 
     engine = require_object(manifest["engine"], {"overlayApi", "minimumVersion"}, {"maximumVersion"}, "engine")
-    require(engine["overlayApi"] == 2, "unsupported overlayApi")
+    overlay_api = engine["overlayApi"]
+    require(
+        isinstance(overlay_api, int) and not isinstance(overlay_api, bool) and overlay_api in {2, 3},
+        "unsupported overlayApi",
+    )
     require(isinstance(engine["minimumVersion"], str) and engine["minimumVersion"], "invalid minimumVersion")
     maximum = engine.get("maximumVersion")
     require(maximum is None or isinstance(maximum, str) and maximum, "invalid maximumVersion")
@@ -263,12 +268,13 @@ def validate_manifest_v2(
     for index, raw in enumerate(overlays):
         require(isinstance(raw, dict), f"overlays[{index}] must be an object")
         operation = raw.get("type")
-        optional = {"mediaType"} if operation == "replace" else {"mediaType", "vcdiffProfile"}
+        optional = {"mediaType"} if operation in {"add", "replace"} else {"mediaType", "vcdiffProfile"}
         item = require_object(raw, common_required, optional, f"overlays[{index}]")
-        require(operation in {"replace", "vcdiff"}, f"overlays[{index}].type is unsupported")
+        require(operation in {"add", "replace", "vcdiff"}, f"overlays[{index}].type is unsupported")
+        require(operation != "add" or overlay_api == 3, "add requires overlayApi 3")
         target_class = item["targetClass"]
         require(target_class in {"resource", "macho"}, f"overlays[{index}].targetClass is unsupported")
-        require(operation != "replace" or target_class == "resource", "Mach-O may only be distributed as VCDIFF")
+        require(operation not in {"add", "replace"} or target_class == "resource", "Mach-O may only be distributed as VCDIFF")
         if operation == "vcdiff":
             require(
                 item.get("vcdiffProfile") == "rfc3284-xdelta3-no-extensions",
@@ -284,15 +290,17 @@ def validate_manifest_v2(
         payload_paths.add(payload_path)
         for name in ("sourceSha256", "resultSha256", "payloadSha256"):
             require(isinstance(item[name], str) and SHA256_RE.fullmatch(item[name]), f"invalid {name} for {guest_path}")
+        if operation == "add":
+            require(item["sourceSha256"] == EMPTY_SHA256, "add sourceSha256 must be the empty-file sentinel")
         payload_bytes = item["payloadBytes"]
         result_bytes = item["resultBytes"]
         resident_bytes = item["maximumResidentBytes"]
         require(isinstance(payload_bytes, int) and not isinstance(payload_bytes, bool) and 0 < payload_bytes <= 1024 ** 3, f"invalid payloadBytes for {guest_path}")
         require(isinstance(result_bytes, int) and not isinstance(result_bytes, bool) and 0 < result_bytes <= 1024 ** 3, f"invalid resultBytes for {guest_path}")
         require(isinstance(resident_bytes, int) and not isinstance(resident_bytes, bool) and 0 <= resident_bytes <= 2 * 1024 ** 3, f"invalid maximumResidentBytes for {guest_path}")
-        if operation == "replace":
-            require(item["payloadSha256"].lower() == item["resultSha256"].lower(), "replace payload hash must equal result hash")
-            require(payload_bytes == result_bytes, "replace payload size must equal result size")
+        if operation in {"add", "replace"}:
+            require(item["payloadSha256"].lower() == item["resultSha256"].lower(), f"{operation} payload hash must equal result hash")
+            require(payload_bytes == result_bytes, f"{operation} payload size must equal result size")
         else:
             require(payload_bytes <= MAX_VCDIFF_BYTES, "VCDIFF payload exceeds the 256 MiB runtime limit")
             require(result_bytes <= MAX_VCDIFF_BYTES, "VCDIFF result exceeds the 256 MiB runtime limit")
