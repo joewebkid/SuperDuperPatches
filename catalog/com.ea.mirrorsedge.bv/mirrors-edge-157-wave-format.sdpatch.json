@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "mirrors-edge-157-wave-format",
+  "name": "Mirror's Edge 1.5.7 — legacy AudioFile WAVE report",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.mirrorsedge.bv",
+    "bundleVersions": ["1.5.7"],
+    "executableSha256": ["297d9d9a07df1c44184434e1b5fb1f54be7e258f8c287b15dafe41d7529431a4"]
+  },
+  "actions": {
+    "audio": { "reportWaveFileFormat": true }
+  }
+}

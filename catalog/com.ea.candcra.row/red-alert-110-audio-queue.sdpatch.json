@@ -1,0 +1,18 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "red-alert-110-audio-queue",
+  "name": "Red Alert 1.1.0 — legacy AudioQueue PCM format",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": false,
+  "priority": 100,
+  "target": {
+    "bundleId": "com.ea.candcra.row",
+    "bundleVersions": ["1.1.0"],
+    "executableSha256": ["44d5d049a7524662418083f5c545576ea050ff4149c6aeac4b1406f80109d88f"]
+  },
+  "actions": {
+    "audio": { "legacyMp3PcmAudioQueue": true }
+  }
+}

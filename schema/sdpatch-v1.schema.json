@@ -112,6 +112,7 @@
           "minProperties": 1,
           "properties": {
             "recoverSharedRenderbufferStorage": { "type": "boolean" },
+            "allowSoleDrawableMismatch": { "type": "boolean" },
             "forceLandscapeRenderbuffer": { "type": "boolean" },
             "forceDirectPresent": { "type": "boolean" }
           }
@@ -122,6 +123,8 @@
           "minProperties": 1,
           "properties": {
             "disableInactiveVertexAttributes": { "type": "boolean" },
+            "enableImplicitVertexArray": { "type": "boolean" },
+            "ignoreDefaultTextureExtensionValues": { "type": "boolean" },
             "forceLandscapeViewport": { "type": "boolean" },
             "trimUnusedSamplerArrays": { "type": "boolean" }
           }
@@ -179,6 +182,15 @@
           "properties": {
             "offlineTcpSink": { "type": "boolean" },
             "offlineUdpSink": { "type": "boolean" }
+          }
+        },
+        "audio": {
+          "type": "object",
+          "additionalProperties": false,
+          "minProperties": 1,
+          "properties": {
+            "legacyMp3PcmAudioQueue": { "type": "boolean" },
+            "reportWaveFileFormat": { "type": "boolean" }
           }
         },
         "achievements": {

@@ -449,6 +449,27 @@
       "kind": "compatibility",
       "status": "experimental",
       "defaultEnabled": true
+    },
+    {
+      "id": "mirrors-edge-157-wave-format",
+      "path": "catalog/com.ea.mirrorsedge.bv/mirrors-edge-157-wave-format.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "red-alert-110-audio-queue",
+      "path": "catalog/com.ea.candcra.row/red-alert-110-audio-queue.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "nova-sole-drawable-present",
+      "path": "catalog/com.gameloft.NOVA/nova-sole-drawable-present.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": false
     }
   ]
 }
