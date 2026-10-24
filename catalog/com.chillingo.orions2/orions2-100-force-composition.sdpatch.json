@@ -1,0 +1,14 @@
+{
+  "$schema": "../../schema/sdpatch-v1.schema.json",
+  "formatVersion": 1,
+  "id": "orions2-100-force-composition",
+  "name": "Orions 2 — видимый город и текст строительства",
+  "kind": "compatibility",
+  "status": "experimental",
+  "defaultEnabled": true,
+  "priority": 100,
+  "target": { "bundleId": "com.chillingo.orions2" },
+  "actions": {
+    "presentation": { "forceComposition": true }
+  }
+}

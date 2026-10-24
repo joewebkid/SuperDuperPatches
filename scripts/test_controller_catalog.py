@@ -42,10 +42,14 @@ class ControllerCatalogTests(unittest.TestCase):
         self.assertEqual(len(patches), len(games))
         for game in games:
             found = [p for p in patches if p["target"]["bundleId"] == game["bundleId"]
-                     and game["bundleVersion"] in p["target"]["bundleVersions"]
-                     and game["executableSha256"] in p["target"]["executableSha256"]]
+                     and (not p["target"].get("bundleVersions") or
+                          game["bundleVersion"] in p["target"]["bundleVersions"])
+                     and (not p["target"].get("executableSha256") or
+                          game["executableSha256"] in p["target"]["executableSha256"])]
             self.assertEqual(len(found), 1)
             self.assertFalse(found[0]["target"].get("allowLegacyWeakMatch", False))
+            if game["bundleId"] == "com.chillingo.Orions":
+                self.assertEqual(found[0]["target"], {"bundleId": game["bundleId"]})
 
     def test_pointer_fallback_never_claims_gameplay_or_changes_rendering(self):
         games = json.loads(LIBRARY.read_text(encoding="utf-8"))

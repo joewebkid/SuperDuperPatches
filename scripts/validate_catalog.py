@@ -293,13 +293,21 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
         fail(path, "target.executableSha256 contains duplicates")
     if weak and patch_id not in LEGACY_WEAK_ALLOWLIST:
         fail(path, "allowLegacyWeakMatch is prohibited for new patches")
-    if not weak and (not hashes or not versions):
-        fail(path, "community target needs both executableSha256 and exact bundleVersions")
-
     actions = manifest["actions"]
     if not isinstance(actions, dict) or not actions:
         fail(path, "actions must be a non-empty object")
     kind = manifest.get("kind")
+    if not weak and (not hashes or not versions):
+        # Bundle-only discovery is safe for these declarative, reversible
+        # actions. Keep every other community patch pinned to an IPA revision.
+        safe_bundle_wide = not hashes and not versions and (
+            (kind == "input" and not manifest["defaultEnabled"] and
+             actions == {"input": {"cursorMode": "relative", "cursorClickButton": "A"}})
+            or (kind == "compatibility" and
+                actions == {"presentation": {"forceComposition": True}})
+        )
+        if not safe_bundle_wide:
+            fail(path, "community target needs both executableSha256 and exact bundleVersions")
     if kind == "compatibility":
         if not set(actions) <= {"presentation", "eagl", "gles", "input"}:
             fail(path, "compatibility patches may contain only presentation/EAGL/GLES/input actions")
@@ -309,6 +317,7 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
         if not isinstance(presentation, dict):
             fail(path, "actions.presentation must be an object")
         compatibility_presentation_actions = {
+            "forceComposition",
             "presentFlipX",
             "presentRotate180",
             "correctLandscapeAutorotationLayout",
@@ -318,6 +327,8 @@ def validate(path: Path, seen_ids: set[str]) -> dict[str, object]:
         }
         if not set(presentation) <= compatibility_presentation_actions:
             fail(path, "actions.presentation contains an unsupported compatibility action")
+        if "forceComposition" in presentation and not isinstance(presentation["forceComposition"], bool):
+            fail(path, "presentation.forceComposition must be boolean")
         orientation = presentation.get("startupDeviceOrientation")
         if orientation is not None and orientation not in {
             "portrait",

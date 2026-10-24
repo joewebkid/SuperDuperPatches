@@ -48,14 +48,10 @@
       "kind": "input",
       "path": "catalog/com.chillingo.Orions/controller-com-chillingo-orions-c5f88dd5.sdpatch.json",
       "bundleId": "com.chillingo.Orions",
-      "bundleVersions": [
-        "1.1"
-      ],
-      "executableSha256": [
-        "c5f88dd5160b1404b4f0c01f0bb2b7ba244f8bd83bdad7d2178112aed0bde76d"
-      ],
-      "bytes": 612,
-      "sha256": "948663286103594694e4d92acca6d311a98abf6b134ff0f5060eafbc46976f9e"
+      "bundleVersions": [],
+      "executableSha256": [],
+      "bytes": 463,
+      "sha256": "a44a2b0faafc9cb8248bfab37d7f69dff31422769d27c53fcad3d396b87350aa"
     },
     {
       "id": "controller-com-com2us-feanor2-c057c2b2",
@@ -826,6 +822,16 @@
       ],
       "bytes": 590,
       "sha256": "8ad379d7379dc5d414afb255b1d7674a8db412402807c0e51ac4bff03c0d0c02"
+    },
+    {
+      "id": "orions2-100-force-composition",
+      "kind": "compatibility",
+      "path": "catalog/com.chillingo.orions2/orions2-100-force-composition.sdpatch.json",
+      "bundleId": "com.chillingo.orions2",
+      "bundleVersions": [],
+      "executableSha256": [],
+      "bytes": 433,
+      "sha256": "b0e70408becaaeea5e0afad728e7330f7e3e0eca88dcde436b5692b9cb41031e"
     },
     {
       "id": "snowboard-hero-direct-eagl-present",
