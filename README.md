@@ -13,7 +13,7 @@ empty until a package with redistribution rights is reviewed. Downloading a
 
 This is the source tree for the standalone `SuperDuperPatches` catalog. It
 contains declarative compatibility metadata only. The emulator embeds a
-built-in subset and can stage separately downloaded exact-revision JSON
+built-in subset and can stage separately downloaded JSON
 manifests. Downloaded new IDs remain off until enabled in a game profile;
 signed automatic trust is a later milestone.
 
@@ -63,12 +63,18 @@ never enabled automatically; publish only payloads you may redistribute.
 
 ## Target safety
 
-Community patches must specify:
+Community patches normally specify:
 
 1. exact `bundleId`;
 2. one or more tested `bundleVersions`;
 3. SHA-256 of the unmodified Mach-O executable;
 4. a reproducible test plan and rollback instructions.
+
+The validator has two narrow bundle-wide exceptions: an optional relative
+gamepad cursor (`A` click), and `presentation.forceComposition`. They contain
+no binary offsets and remain reversible. Other actions still need both the
+tested version and executable SHA-256; a patch with only one constraint is
+invalid. A bundle-wide match does not make an untested IPA revision 5/5.
 
 `allowLegacyWeakMatch` exists only to migrate existing built-in bundle-ID
 branches without regressing current users. CI rejects it for community PRs.

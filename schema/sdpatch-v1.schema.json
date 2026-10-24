@@ -80,7 +80,17 @@
             "executableSha256": { "minItems": 1 }
           }
         },
-        { "required": ["allowLegacyWeakMatch"], "properties": { "allowLegacyWeakMatch": { "const": true } } }
+        { "required": ["allowLegacyWeakMatch"], "properties": { "allowLegacyWeakMatch": { "const": true } } },
+        {
+          "description": "Narrow bundle-wide actions are restricted by validate_catalog.py.",
+          "not": {
+            "anyOf": [
+              { "required": ["bundleVersions"] },
+              { "required": ["executableSha256"] },
+              { "required": ["allowLegacyWeakMatch"] }
+            ]
+          }
+        }
       ]
     },
     "actions": {
@@ -93,6 +103,7 @@
           "additionalProperties": false,
           "minProperties": 1,
           "properties": {
+            "forceComposition": { "type": "boolean" },
             "presentFlipX": { "type": "boolean" },
             "presentRotate180": { "type": "boolean" },
             "correctLandscapeAutorotationLayout": { "type": "boolean" },

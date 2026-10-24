@@ -80,6 +80,27 @@
       "defaultEnabled": true
     },
     {
+      "id": "tiny-wings-true-widescreen",
+      "path": "catalog/com.andreasilliger.tinywings/tiny-wings-true-widescreen.sdpatch.json",
+      "kind": "presentation-layout",
+      "status": "experimental",
+      "defaultEnabled": false
+    },
+    {
+      "id": "snowboard-hero-direct-eagl-present",
+      "path": "catalog/www.fishlabs.net.sbh/snowboard-hero-direct-eagl-present.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
+      "id": "orions2-100-force-composition",
+      "path": "catalog/com.chillingo.orions2/orions2-100-force-composition.sdpatch.json",
+      "kind": "compatibility",
+      "status": "experimental",
+      "defaultEnabled": true
+    },
+    {
       "id": "controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1",
       "path": "catalog/L9978CDJ43.com.wearevigilantes.imps/controller-l9978cdj43-com-wearevigilantes-imps-91cf74a1.sdpatch.json",
       "kind": "input",
@@ -90,13 +111,6 @@
       "id": "controller-com-andreasilliger-tinywings-00e6229a",
       "path": "catalog/com.andreasilliger.tinywings/controller-com-andreasilliger-tinywings-00e6229a.sdpatch.json",
       "kind": "input",
-      "status": "experimental",
-      "defaultEnabled": false
-    },
-    {
-      "id": "tiny-wings-true-widescreen",
-      "path": "catalog/com.andreasilliger.tinywings/tiny-wings-true-widescreen.sdpatch.json",
-      "kind": "presentation-layout",
       "status": "experimental",
       "defaultEnabled": false
     },
@@ -442,13 +456,6 @@
       "kind": "input",
       "status": "experimental",
       "defaultEnabled": false
-    },
-    {
-      "id": "snowboard-hero-direct-eagl-present",
-      "path": "catalog/www.fishlabs.net.sbh/snowboard-hero-direct-eagl-present.sdpatch.json",
-      "kind": "compatibility",
-      "status": "experimental",
-      "defaultEnabled": true
     }
   ]
 }

@@ -22,15 +22,15 @@ for entry in index["patches"]:
         "compatibility", "presentation-layout", "input", "achievement"
     }:
         continue
-    if not target.get("bundleVersions") or not target.get("executableSha256"):
-        continue  # legacy weak matches must never be remotely distributed
+    if target.get("allowLegacyWeakMatch"):
+        continue  # migration-only weak matches are never remotely distributed
     packages.append({
         "id": manifest["id"],
         "kind": manifest["kind"],
         "path": path,
         "bundleId": target["bundleId"],
-        "bundleVersions": target["bundleVersions"],
-        "executableSha256": [value.lower() for value in target["executableSha256"]],
+        "bundleVersions": target.get("bundleVersions", []),
+        "executableSha256": [value.lower() for value in target.get("executableSha256", [])],
         "bytes": len(data),
         "sha256": hashlib.sha256(data).hexdigest(),
     })
@@ -39,4 +39,4 @@ output = {"formatVersion": 1, "patches": packages}
 (root / "remote-index.json").write_text(
     json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
 )
-print(f"Indexed {len(packages)} exact-revision patches")
+print(f"Indexed {len(packages)} patch manifests")

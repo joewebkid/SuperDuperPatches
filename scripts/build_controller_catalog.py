@@ -70,13 +70,18 @@ def make_manifest(game: dict, recipes: dict) -> dict:
     slug = re.sub(r"[^a-z0-9]+", "-", game["bundleId"].lower()).strip("-")[:60]
     patch_id = f"controller-{slug}-{game['executableSha256'][:8]}"
     label = "Геймпад · игровая раскладка" if recipe else "Геймпад · курсор, нажатие и drag"
+    target = {"bundleId": game["bundleId"], "bundleVersions": [game["bundleVersion"]],
+              "executableSha256": [game["executableSha256"]]}
+    # This optional, binary-offset-free pointer mapping is shared by Orions
+    # revisions; gameplay compatibility ratings remain version-specific.
+    if game["bundleId"] == "com.chillingo.Orions" and not recipe and not reviewed:
+        target = {"bundleId": game["bundleId"]}
     return {
         "$schema": "../../schema/sdpatch-v1.schema.json", "formatVersion": 1,
         "id": patch_id, "name": reviewed["name"] if reviewed else f"{label} — {game['title']}"[:128],
         "kind": "input", "status": "experimental", "defaultEnabled": bool(recipe) and not bool(reviewed),
         "priority": 100,
-        "target": {"bundleId": game["bundleId"], "bundleVersions": [game["bundleVersion"]],
-                   "executableSha256": [game["executableSha256"]]},
+        "target": target,
         "actions": {"input": actions},
     }
 
